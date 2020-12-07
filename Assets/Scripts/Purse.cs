@@ -39,7 +39,13 @@ public static class Purse
         }
     }
 
-    public static bool TryBuy(int coins, int diamonds)
+    public static void AddMoney(int coins, int diamonds)
+    {
+        Coins += coins;
+        Diamonds += diamonds;
+    }
+
+    public static bool RemoveMoney(int coins, int diamonds)
     {
         if ((Coins < coins) || (Diamonds < diamonds))
         {

@@ -5,26 +5,42 @@ using UnityEngine.UI;
 
 public class Level : Page
 {
-    internal const int MIN_BET = 50;
-    internal const int MAX_BET = 3000;
-    internal const int BET_STEP = 50;
-    internal const float SPIN_DELAY = .35f;
-
-
-    [SerializeField]
-    internal int levelId = default;
+    private const int MIN_BET = 50;
+    private const int MAX_BET = 3000;
+    private const int BET_STEP = 50;
+    private const float SPIN_DELAY = .35f;
 
     [SerializeField]
-    internal Text coinText = default;
-    [SerializeField]
-    internal Text diamondText = default;
+    private int levelId = default;
 
     [SerializeField]
-    internal Button spinButton = default;
+    private Text coinText = default;
+    [SerializeField]
+    private Text diamondText = default;
 
     [SerializeField]
-    internal RectTransform[] columns = default;
-    internal List<List<Cell>> cells = new List<List<Cell>>();
+    private RectTransform[] columns = default;
+    private List<List<Cell>> cells = new List<List<Cell>>();
+
+    [HideInInspector]
+    public int cellCounter = 0;
+
+    [SerializeField]
+    private Text winText = default;
+    [SerializeField]
+    private Text betText = default;
+    [SerializeField]
+    private Button getLowerRateButton = default;
+    [SerializeField]
+    private Button getUpperRateButton = default;
+
+    [SerializeField]
+    private Button maxBetButton = default;
+    [SerializeField]
+    private Button spinButton = default;
+
+    [SerializeField]
+    private Sprite[] cellImages = default;
 
     private new void Awake()
     {
@@ -40,7 +56,49 @@ public class Level : Page
 
     private void Spin()
     {
-        StartCoroutine(SpinCoroutine());
+        if (cellCounter == 0)
+        {
+            StartCoroutine(SpinCoroutine());
+        }
+    }
+
+    public Cell.CellSprite GetRandomCellSprite()
+    {
+        int rand = Random.Range(0, cellImages.Length);
+        return new Cell.CellSprite(rand, cellImages[rand]);
+    }
+
+    public void EndSpin()
+    {
+        if (cellCounter != 0)
+        {
+            return;
+        }
+        for (var i = 0; i < cells.Count; i++)
+        {
+            string str = "";
+            for (var j = 0; j < cells[i].Count; j++)
+            {
+                str += cells[i][j].GetName() + " ";
+            }
+            Debug.Log(str);
+        }
+    }
+
+    private void AddMoney(int coins, int diamonds)
+    {
+        Purse.AddMoney(coins, diamonds);
+        coinText.text = Purse.Coins + "";
+        diamondText.text = Purse.Diamonds + "";
+    }
+
+    private void RemoveMoney(int coins, int diamonds)
+    {
+        if (Purse.RemoveMoney(coins, diamonds))
+        {
+            coinText.text = Purse.Coins + "";
+            diamondText.text = Purse.Diamonds + "";
+        }
     }
 
     private IEnumerator SpinCoroutine()

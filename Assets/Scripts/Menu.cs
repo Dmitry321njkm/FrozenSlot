@@ -54,7 +54,7 @@ public class Menu : Page
             }
             else
             {
-                if (Purse.TryBuy(priceCoin, priceDiamond))
+                if (Purse.RemoveMoney(priceCoin, priceDiamond))
                 {
                     LevelsState.UnlockLevel(levelId);
                     Unlock();
