@@ -22,39 +22,34 @@ public class Level : Page
     internal Button spinButton = default;
 
     [SerializeField]
-    internal RectTransform column = default;
-    internal Cell[] cells = default;
+    internal RectTransform[] columns = default;
+    internal List<List<Cell>> cells = new List<List<Cell>>();
 
     private new void Awake()
     {
         base.Awake();
         LevelPages[levelId] = this;
         spinButton.onClick.AddListener(Spin);
-        cells = column.GetComponentsInChildren<Cell>();
+        for (var i = 0; i < columns.Length; i++)
+        {
+            cells.Add(new List<Cell>());
+            cells[i].AddRange(columns[i].GetComponentsInChildren<Cell>());
+        }
     }
 
     private void Spin()
     {
-        StartCoroutine(MoveCell());
+        StartCoroutine(SpinCoroutine());
     }
 
-    private IEnumerator MoveCell ()
+    private IEnumerator SpinCoroutine()
     {
-        for (var i = 0; ; i++)
+        foreach (var cell in cells)
         {
-            yield return new WaitForEndOfFrame();
-            for (var j = 0; j < cells.Length; j++)
+            foreach (var c in cell)
             {
-                cells[j].MoveDown();
+                c.Move();
             }
-        }
-    }
-
-    private void GetMinPosCell()
-    {
-        for (var i = 0; i < cells.Length; i++)
-        {
-
         }
     }
 }
