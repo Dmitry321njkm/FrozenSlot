@@ -8,6 +8,7 @@ public class Level : Page
     internal const int MIN_BET = 50;
     internal const int MAX_BET = 3000;
     internal const int BET_STEP = 50;
+    internal const float SPIN_DELAY = .35f;
 
 
     [SerializeField]
@@ -46,6 +47,7 @@ public class Level : Page
     {
         foreach (var cell in cells)
         {
+            yield return new WaitForSeconds(SPIN_DELAY);
             foreach (var c in cell)
             {
                 c.Move();

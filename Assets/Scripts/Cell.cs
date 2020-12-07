@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Cell : MonoBehaviour
 {
-    private const float MOVING_SPEED = 20f;
+    private const float MOVING_SPEED = 40f;
     private const int CELL_COUNT = 4;
     private const float CELL_DISTANCE = 260f;
 
