@@ -96,7 +96,10 @@ public class Menu : Page
         base.Awake();
         MenuPage = this;
 
-        LevelsState.UnlockLevel(0);
+        if (!LevelsState.IsLevelAvailible(0))
+        {
+            LevelsState.UnlockLevel(0);
+        }
         soundSettingsButton.onClick.AddListener(OpenSoundSettings);
         foreach (var levelButton in levelButtons)
         {

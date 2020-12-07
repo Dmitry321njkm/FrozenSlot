@@ -17,6 +17,7 @@ public class StartScreen : Page
         StartScreenPage = this;
 
         Open();
+        Achivements.SetOpenTheGameCounter();
     }
 
     public override void Open()
