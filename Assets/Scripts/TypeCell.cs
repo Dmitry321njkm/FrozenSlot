@@ -14,6 +14,8 @@ public class TypeCell
     }
 
     [SerializeField]
+    private int id = default;
+    [SerializeField]
     private Sprite sprite = default;
     [SerializeField]
     private CellValue[] cellValues = default;
