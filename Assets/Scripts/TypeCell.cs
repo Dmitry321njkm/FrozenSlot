@@ -17,4 +17,9 @@ public class TypeCell
     private Sprite sprite = default;
     [SerializeField]
     private CellValue[] cellValues = default;
+
+    public Sprite GetSprite()
+    {
+        return sprite;
+    }
 }

@@ -127,11 +127,9 @@ public class Level : Page
         }
     }
 
-    public Cell.CellSprite GetRandomCellSprite()
+    public TypeCell GetRandomTypeCell()
     {
-        //int rand = Random.Range(0, cellImages.Length);
-        //return new Cell.CellSprite(rand, cellImages[rand]);
-        return new Cell.CellSprite();
+        return typeCells[Random.Range(0, typeCells.Length)];
     }
 
     private bool IsSpinning()

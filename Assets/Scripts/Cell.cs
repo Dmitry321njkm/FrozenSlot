@@ -8,27 +8,13 @@ public class Cell : MonoBehaviour
     private const float MOVING_SPEED = 30f;
     private const int SPINNING_TIME = 300;
 
-    public class CellSprite
-    {
-        internal int id = default;
-        internal Sprite sprite = default;
-
-        public CellSprite() { }
-
-        public CellSprite(int _id, Sprite _sprite)
-        {
-            id = _id;
-            sprite = _sprite;
-        }
-    }
-
     private Level currentLevel = default;
 
     private RectTransform rectTransform = default;
     private Vector2 startPosition = default;
 
     private Image cellImage = default;
-    private CellSprite cellSprite = default;
+    private TypeCell typeCell = default;
 
     public static float UpPosition = default;
     public static float DownPosition = default;
@@ -44,8 +30,8 @@ public class Cell : MonoBehaviour
 
     private void SetImage()
     {
-        cellSprite = currentLevel.GetRandomCellSprite();
-        cellImage.sprite = cellSprite.sprite;
+        typeCell = currentLevel.GetRandomTypeCell();
+        cellImage.sprite = typeCell.GetSprite();
     }
 
     public void Move()
@@ -68,14 +54,9 @@ public class Cell : MonoBehaviour
         return rectTransform.anchoredPosition.y;
     }
 
-    public string GetName()
-    {
-        return cellImage.sprite.name;
-    }
-
     public int GetCellId()
     {
-        return cellSprite.id;
+        return 0;
     }
 
     private IEnumerator MoveCoroutine()
