@@ -3,7 +3,7 @@
 public static class Achivements
 {
     private const string OPEN_THE_GAME = "OpenTheGame";
-    private const int OPEN_THE_GAME_NUMBER = 1000;
+    public const int OPEN_THE_GAME_NUMBER = 1000;
     private static int openTheGameCounter
     {
         get
@@ -29,7 +29,7 @@ public static class Achivements
     }
 
     private const string FREE_SPIN = "FreeSpin";
-    private const int FREE_SPIN_NUMBER = 5000;
+    public const int FREE_SPIN_NUMBER = 5000;
     private static int freeSpinCounter
     {
         get
@@ -55,7 +55,7 @@ public static class Achivements
     }
 
     private const string SCATTER = "Scatter";
-    private const int SCATTER_NUMBER = 2000;
+    public const int SCATTER_NUMBER = 2000;
     private static int scatterCounter
     {
         get
@@ -81,7 +81,7 @@ public static class Achivements
     }
 
     private const string WILD = "Wild";
-    private const int WILD_NUMBER = 1000;
+    public const int WILD_NUMBER = 1000;
     private static int wildCounter
     {
         get
@@ -107,7 +107,7 @@ public static class Achivements
     }
 
     private const string MAX_BET = "MaxBet";
-    private const int MAX_BET_NUMBER = 500;
+    public const int MAX_BET_NUMBER = 500;
     private static int maxBetCounter
     {
         get
@@ -133,7 +133,7 @@ public static class Achivements
     }
 
     private const string COMPLETE_SPECIAL_EVENTS = "CompleteSpetialEvents";
-    private const int COMPLETE_SPECIAL_EVENTS_NUMBER = 5;
+    public const int COMPLETE_SPECIAL_EVENTS_NUMBER = 5;
     private static int completeSpecialEventsCounter
     {
         get
@@ -159,7 +159,7 @@ public static class Achivements
     }
 
     private const string COLLECT_DIAMONDS = "CollectDiamonds";
-    private const int COLLECT_DIAMONDS_NUMBER = 100000;
+    public const int COLLECT_DIAMONDS_NUMBER = 100000;
     private static int collectDiamondsCounter
     {
         get
@@ -185,7 +185,7 @@ public static class Achivements
     }
 
     private const string OPEN_ALL_LEVELS = "OpenAllLevels";
-    private const int OPEN_ALL_LEVELS_NUMBER = 6;
+    public const int OPEN_ALL_LEVELS_NUMBER = 6;
     private static int openTheLevelCounter
     {
         get
@@ -211,7 +211,7 @@ public static class Achivements
     }
 
     private const string COLLECT_MONEY = "ColectMoney";
-    private const int COLLECT_MONEY_NUMBER = 2000000;
+    public const int COLLECT_MONEY_NUMBER = 2000000;
     private static int collectMoneyCounter
     {
         get
@@ -237,7 +237,7 @@ public static class Achivements
     }
 
     private const string GET_DAILY_BONUS = "GetDailyBonus";
-    private const int GET_DAILY_BONUS_NUMBER = 1000;
+    public const int GET_DAILY_BONUS_NUMBER = 1000;
     private static int getDailyBonusCounter
     {
         get
@@ -263,7 +263,7 @@ public static class Achivements
     }
 
     private const string LINES = "Lines";
-    private const int LINES_NUMBER = 500000;
+    public const int LINES_NUMBER = 500000;
     private static int linesCounter
     {
         get
@@ -289,7 +289,7 @@ public static class Achivements
     }
 
     private const string OPEN_ACHIVEMENTS = "OpenAchivements";
-    private const int OPEN_ACHIVEMENTS_NUMBER = 10000;
+    public const int OPEN_ACHIVEMENTS_NUMBER = 10000;
     private static int openAchivementsCounter
     {
         get

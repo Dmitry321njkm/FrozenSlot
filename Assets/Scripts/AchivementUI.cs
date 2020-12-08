@@ -42,69 +42,69 @@ public class AchivementUI : MonoBehaviour
 
     void OpenTheGameCheck()
     { 
-        AchivementCheck(_openTheGame, Achivements.GetOpenTheGameProcent());
+        AchivementCheck(_openTheGame, Achivements.GetOpenTheGameProcent(), Achivements.OPEN_THE_GAME_NUMBER);
     }
 
     void FreeSpeenCheck()
     {
-        AchivementCheck(_freeSpin, Achivements.GetFreeSpinProcent());
+        AchivementCheck(_freeSpin, Achivements.GetFreeSpinProcent(), Achivements.FREE_SPIN_NUMBER);
     }
 
     void ScatterCheck()
     {
-        AchivementCheck(_scatter, Achivements.GetScatterProcent());
+        AchivementCheck(_scatter, Achivements.GetScatterProcent(), Achivements.SCATTER_NUMBER);
     }
 
     void WildCheck()
     {
-        AchivementCheck(_wild, Achivements.GetWildProcent());
+        AchivementCheck(_wild, Achivements.GetWildProcent(), Achivements.WILD_NUMBER);
     }
 
     void MaxBetCheck()
     {
-        AchivementCheck(_maxBet, Achivements.GetCompleteSpecialEventsProcent());
+        AchivementCheck(_maxBet, Achivements.GetCompleteSpecialEventsProcent(), Achivements.MAX_BET_NUMBER);
     }
 
     void DoSpecialEventsCheck()
     {
-        AchivementCheck(_doSpecialEvents, Achivements.GetCompleteSpecialEventsProcent());
+        AchivementCheck(_doSpecialEvents, Achivements.GetCompleteSpecialEventsProcent(), Achivements.COMPLETE_SPECIAL_EVENTS_NUMBER);
     }
 
     void CollectDiamondCheck()
     {
-        AchivementCheck(_collectDiamond, Achivements.GetCollectDiamondsProcent());
+        AchivementCheck(_collectDiamond, Achivements.GetCollectDiamondsProcent(), Achivements.COLLECT_DIAMONDS_NUMBER);
     }
 
     void OpenAllLevelCheck()
     {
-        AchivementCheck(_openAllLevel, Achivements.GetOpenTheLevelProcent());
+        AchivementCheck(_openAllLevel, Achivements.GetOpenTheLevelProcent(), Achivements.OPEN_ALL_LEVELS_NUMBER);
     }
 
     void CollectMoneyCheck()
     {
-        AchivementCheck(_collectMoney, Achivements.GetCollectMoneyProcent());
+        AchivementCheck(_collectMoney, Achivements.GetCollectMoneyProcent(), Achivements.COLLECT_MONEY_NUMBER);
     }
 
     void GetDailyBonusCheck()
     {
-        AchivementCheck(_getDailyBonus, Achivements.GetGetDailyBonusCounterProcent());
+        AchivementCheck(_getDailyBonus, Achivements.GetGetDailyBonusCounterProcent(), Achivements.GET_DAILY_BONUS_NUMBER);
     }
 
     void MakeItemsCheck()
     {
-        AchivementCheck(_makeLines, Achivements.GetLinesCounterProcent());
+        AchivementCheck(_makeLines, Achivements.GetLinesCounterProcent(), Achivements.LINES_NUMBER);
     }
 
     void OpenAchivementsCheck()
     {
-        AchivementCheck(_openAchivement, Achivements.GetOpenAchivementsCounterProcent());
+        AchivementCheck(_openAchivement, Achivements.GetOpenAchivementsCounterProcent(), Achivements.OPEN_ACHIVEMENTS_NUMBER);
     }
 
-    void AchivementCheck(AchivementCell _cell, float _percent)
+    void AchivementCheck(AchivementCell _cell, float _percent, int _number)
     {
         _cell.Percent.text = (_percent * 100).ToString() + "%";
         _cell.ImageProgress.fillAmount = _percent;
-
+        _cell.Number.text = "x" + _number;
     }
 
    
@@ -116,4 +116,5 @@ public class AchivementCell
 {
     public Image ImageProgress;
     public Text Percent;
+    public Text Number;
 }

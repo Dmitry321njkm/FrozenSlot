@@ -83,11 +83,28 @@ public class Level : Page
     private Button getLowerBetButton = default;
     [SerializeField]
     private Button getUpperBetButton = default;
-
     [SerializeField]
     private Button getMaxBetButton = default;
     [SerializeField]
     private Button spinButton = default;
+
+    private int freeSpin
+    {
+        get
+        {
+            return LevelsState.GetFreeSpin(levelId);
+        }
+        set
+        {
+            freeSpinImage.fillAmount = (float)freeSpin / (float)LevelsState.MAX_FREE_SPIN;
+            freeSpinText.text = freeSpin + "/" + LevelsState.MAX_FREE_SPIN;
+        }
+    }
+
+    [SerializeField]
+    private Text freeSpinText = default;
+    [SerializeField]
+    private Image freeSpinImage = default;
 
     [SerializeField]
     private TypeCell[] typeCells = default;
@@ -97,13 +114,35 @@ public class Level : Page
     [SerializeField]
     private RectTransform DownPosition = default;
 
+    [SerializeField]
+    private Button levelMenuButton = default;
+    [SerializeField]
+    private Button soundSettingsButton = default;
+    [SerializeField]
+    private Button specialEventsButton = default;
+    [SerializeField]
+    private Button dailyBonusButton = default;
+    [SerializeField]
+    private Button achivementsButton = default;
+
+    [SerializeField]
+    private LevelMenu levelMenu = default;
+    [SerializeField]
+    private Achivement achivement = default;
+
     private new void Awake()
     {
         base.Awake();
         LevelPages[levelId] = this;
         bet = 0;
+        freeSpin = freeSpin;
         coins = Purse.Coins;
         diamonds = Purse.Diamonds;
+        levelMenuButton.onClick.AddListener(OpenLevelMenu);
+        soundSettingsButton.onClick.AddListener(OpenSoundSettings);
+        specialEventsButton.onClick.AddListener(OpenSpecialEvents);
+        dailyBonusButton.onClick.AddListener(OpenDailyBonus);
+        achivementsButton.onClick.AddListener(OpenAchivement);
         getLowerBetButton.onClick.AddListener(GetLowerBet);
         getUpperBetButton.onClick.AddListener(GetUpperBet);
         getMaxBetButton.onClick.AddListener(GetMaxBet);
@@ -117,13 +156,47 @@ public class Level : Page
         Cell.DownPosition = DownPosition.position.y;
     }
 
+    private void OpenLevelMenu()
+    {
+        levelMenu.Open();
+    }
+
+    private void OpenSoundSettings()
+    {
+        SoundSettingsPage.Open();
+    }
+
+    private void OpenSpecialEvents()
+    {
+        //не свертано
+    }
+
+    private void OpenDailyBonus()
+    {
+        //не сверстано
+    }
+
+    private void OpenAchivement()
+    {
+        achivement.Open();
+    }
+
     private void Spin()
     {
-        if ((!IsSpinning()) && (coins >= bet))
+        if (!IsSpinning())
         {
-            coins -= bet;
-            Purse.RemoveMoney(bet, 0);
-            StartCoroutine(SpinCoroutine());
+            if (freeSpin > 0)
+            {
+                LevelsState.RemoveFreeSpin(levelId);
+                freeSpin = freeSpin;
+                StartCoroutine(SpinCoroutine());
+            }
+            else if (coins >= bet)
+            {
+                coins -= bet;
+                Purse.RemoveMoney(bet, 0);
+                StartCoroutine(SpinCoroutine());
+            }
         }
     }
 
