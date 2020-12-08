@@ -76,11 +76,6 @@ public class Cell : MonoBehaviour
         {
             yield return new WaitForEndOfFrame();
             MoveDown();
-            if (rectTransform.position.y <= DownPosition)
-            {
-                SetImage();
-                MoveUp();
-            }
         }
         yield return new WaitForEndOfFrame();
         rectTransform.anchoredPosition = startPosition;

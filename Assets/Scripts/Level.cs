@@ -108,6 +108,8 @@ public class Level : Page
 
     [SerializeField]
     private TypeCell[] typeCells = default;
+    [SerializeField]
+    private Line[] lines = default;
 
     [SerializeField]
     private RectTransform UpPosition = default;
@@ -129,6 +131,8 @@ public class Level : Page
     private LevelMenu levelMenu = default;
     [SerializeField]
     private Achivement achivement = default;
+    [SerializeField]
+    private Page infoPanel = default;
 
     private new void Awake()
     {
@@ -158,7 +162,14 @@ public class Level : Page
 
     private void OpenLevelMenu()
     {
-        levelMenu.Open();
+        if (infoPanel.GetComponent<CanvasGroup>().alpha == 0)
+        {
+            levelMenu.Open();
+        }
+        else
+        {
+            infoPanel.Close();
+        }
     }
 
     private void OpenSoundSettings()
@@ -183,20 +194,22 @@ public class Level : Page
 
     private void Spin()
     {
-        if (!IsSpinning())
+        if (IsSpinning())
         {
-            if (freeSpin > 0)
-            {
-                LevelsState.RemoveFreeSpin(levelId);
-                freeSpin = freeSpin;
-                StartCoroutine(SpinCoroutine());
-            }
-            else if (coins >= bet)
-            {
-                coins -= bet;
-                Purse.RemoveMoney(bet, 0);
-                StartCoroutine(SpinCoroutine());
-            }
+            return;
+        }
+        if (freeSpin > 0)
+        {
+            bet = MAX_BET;
+            LevelsState.RemoveFreeSpin(levelId);
+            freeSpin = freeSpin;
+            StartCoroutine(SpinCoroutine());
+        }
+        else if (coins >= bet)
+        {
+            coins -= bet;
+            Purse.RemoveMoney(bet, 0);
+            StartCoroutine(SpinCoroutine());
         }
     }
 
@@ -212,9 +225,14 @@ public class Level : Page
 
     public void EndSpin()
     {
-        if (!IsSpinning())
+        if (IsSpinning())
         {
-            FillCellIds();
+            return;
+        }
+        FillCellIds();
+        foreach (var line in lines)
+        {
+            StartCoroutine(line.Show());
         }
     }
 
