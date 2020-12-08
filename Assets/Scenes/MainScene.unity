@@ -10329,6 +10329,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6197aed251a574e7680d4136eb3dd7c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeCell:
+    Id: 0
+    sprite: {fileID: 0}
+    cellValues: []
 --- !u!114 &1776415455112172859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10895,12 +10899,12 @@ MonoBehaviour:
   freeSpinText: {fileID: 7072056690190371704}
   freeSpinImage: {fileID: 7072056689890547326}
   typeCells:
-  - id: 0
+  - Id: 0
     sprite: {fileID: 21300000, guid: 7009b17a086944a2389bb11404fab283, type: 3}
     cellValues:
     - count: 5
       value: 350
-  - id: 1
+  - Id: 1
     sprite: {fileID: 21300000, guid: a1d84c966981548ee890398ee7ebe795, type: 3}
     cellValues:
     - count: 3
@@ -10909,7 +10913,7 @@ MonoBehaviour:
       value: 8
     - count: 5
       value: 10
-  - id: 2
+  - Id: 2
     sprite: {fileID: 21300000, guid: a4ebbf53f8af84d63a88bcd089a9cc08, type: 3}
     cellValues:
     - count: 3
@@ -10918,7 +10922,7 @@ MonoBehaviour:
       value: 125
     - count: 5
       value: 150
-  - id: 3
+  - Id: 3
     sprite: {fileID: 21300000, guid: f0db5183743974fa08c6e13dc482b301, type: 3}
     cellValues:
     - count: 3
@@ -10927,7 +10931,7 @@ MonoBehaviour:
       value: 75
     - count: 5
       value: 100
-  - id: 4
+  - Id: 4
     sprite: {fileID: 21300000, guid: 22807c8ba8d45413e9084f3d15ec390e, type: 3}
     cellValues:
     - count: 3
@@ -10936,7 +10940,7 @@ MonoBehaviour:
       value: 30
     - count: 5
       value: 50
-  - id: 5
+  - Id: 5
     sprite: {fileID: 21300000, guid: 28ff667d2d27440de885a84fbc6ee607, type: 3}
     cellValues:
     - count: 3
@@ -10968,9 +10972,19 @@ MonoBehaviour:
     - {x: 3, y: 2}
     - {x: 4, y: 2}
   - image: {fileID: 2934906666263812182}
-    Points: []
+    Points:
+    - {x: 0, y: 2}
+    - {x: 1, y: 1}
+    - {x: 2, y: 0}
+    - {x: 3, y: 1}
+    - {x: 4, y: 2}
   - image: {fileID: 2934906667335918200}
-    Points: []
+    Points:
+    - {x: 0, y: 0}
+    - {x: 1, y: 1}
+    - {x: 2, y: 2}
+    - {x: 3, y: 1}
+    - {x: 4, y: 0}
   UpPosition: {fileID: 1995061638}
   DownPosition: {fileID: 170917035}
   levelMenuButton: {fileID: 1955719595}
@@ -13693,6 +13707,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6197aed251a574e7680d4136eb3dd7c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeCell:
+    Id: 0
+    sprite: {fileID: 0}
+    cellValues: []
 --- !u!114 &7764944552155061979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13820,6 +13838,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6197aed251a574e7680d4136eb3dd7c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeCell:
+    Id: 0
+    sprite: {fileID: 0}
+    cellValues: []
 --- !u!114 &7764944552327030361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13908,6 +13930,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6197aed251a574e7680d4136eb3dd7c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeCell:
+    Id: 0
+    sprite: {fileID: 0}
+    cellValues: []
 --- !u!114 &7764944552498423830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13996,6 +14022,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6197aed251a574e7680d4136eb3dd7c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeCell:
+    Id: 0
+    sprite: {fileID: 0}
+    cellValues: []
 --- !u!114 &7764944552515421812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14121,6 +14151,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6197aed251a574e7680d4136eb3dd7c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeCell:
+    Id: 0
+    sprite: {fileID: 0}
+    cellValues: []
 --- !u!1 &7764944552713064826
 GameObject:
   m_ObjectHideFlags: 0
@@ -14211,6 +14245,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6197aed251a574e7680d4136eb3dd7c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeCell:
+    Id: 0
+    sprite: {fileID: 0}
+    cellValues: []
 --- !u!114 &7764944552756059364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14299,6 +14337,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6197aed251a574e7680d4136eb3dd7c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeCell:
+    Id: 0
+    sprite: {fileID: 0}
+    cellValues: []
 --- !u!114 &7764944553000516986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14387,6 +14429,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6197aed251a574e7680d4136eb3dd7c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeCell:
+    Id: 0
+    sprite: {fileID: 0}
+    cellValues: []
 --- !u!114 &7764944553094935435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14475,6 +14521,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6197aed251a574e7680d4136eb3dd7c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeCell:
+    Id: 0
+    sprite: {fileID: 0}
+    cellValues: []
 --- !u!114 &7764944553180560159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14602,6 +14652,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6197aed251a574e7680d4136eb3dd7c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeCell:
+    Id: 0
+    sprite: {fileID: 0}
+    cellValues: []
 --- !u!114 &7764944553291965866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14690,6 +14744,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6197aed251a574e7680d4136eb3dd7c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeCell:
+    Id: 0
+    sprite: {fileID: 0}
+    cellValues: []
 --- !u!114 &7764944553373649388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14817,6 +14875,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6197aed251a574e7680d4136eb3dd7c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeCell:
+    Id: 0
+    sprite: {fileID: 0}
+    cellValues: []
 --- !u!114 &7764944553661608221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14905,6 +14967,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6197aed251a574e7680d4136eb3dd7c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeCell:
+    Id: 0
+    sprite: {fileID: 0}
+    cellValues: []
 --- !u!114 &7764944553699587058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14993,6 +15059,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6197aed251a574e7680d4136eb3dd7c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeCell:
+    Id: 0
+    sprite: {fileID: 0}
+    cellValues: []
 --- !u!114 &7764944553890660963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15081,6 +15151,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6197aed251a574e7680d4136eb3dd7c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeCell:
+    Id: 0
+    sprite: {fileID: 0}
+    cellValues: []
 --- !u!114 &7764944553896907148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15206,6 +15280,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6197aed251a574e7680d4136eb3dd7c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeCell:
+    Id: 0
+    sprite: {fileID: 0}
+    cellValues: []
 --- !u!1 &7764944554063586253
 GameObject:
   m_ObjectHideFlags: 0
@@ -15257,6 +15335,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6197aed251a574e7680d4136eb3dd7c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeCell:
+    Id: 0
+    sprite: {fileID: 0}
+    cellValues: []
 --- !u!114 &7764944554063586256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15345,6 +15427,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6197aed251a574e7680d4136eb3dd7c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeCell:
+    Id: 0
+    sprite: {fileID: 0}
+    cellValues: []
 --- !u!114 &7764944554089688719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15470,6 +15556,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6197aed251a574e7680d4136eb3dd7c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeCell:
+    Id: 0
+    sprite: {fileID: 0}
+    cellValues: []
 --- !u!1 &8585550328081301748
 GameObject:
   m_ObjectHideFlags: 0

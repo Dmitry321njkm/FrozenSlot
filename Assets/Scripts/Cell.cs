@@ -14,7 +14,8 @@ public class Cell : MonoBehaviour
     private Vector2 startPosition = default;
 
     private Image cellImage = default;
-    private TypeCell typeCell = default;
+    [HideInInspector]
+    public TypeCell TypeCell = default;
 
     public static float UpPosition = default;
     public static float DownPosition = default;
@@ -30,8 +31,8 @@ public class Cell : MonoBehaviour
 
     private void SetImage()
     {
-        typeCell = currentLevel.GetRandomTypeCell();
-        cellImage.sprite = typeCell.GetSprite();
+        TypeCell = currentLevel.GetRandomTypeCell();
+        cellImage.sprite = TypeCell.GetSprite();
     }
 
     public void Move()
@@ -56,7 +57,7 @@ public class Cell : MonoBehaviour
 
     public int GetCellId()
     {
-        return 0;
+        return TypeCell.Id;
     }
 
     private IEnumerator MoveCoroutine()

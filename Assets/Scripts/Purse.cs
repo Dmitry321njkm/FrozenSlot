@@ -41,7 +41,7 @@ public static class Purse
         }
     }
 
-    public static bool AddMoney(int coins, int diamonds)
+    public static bool AddMoney(int coins, int diamonds = 0)
     {
         if ((Coins < -coins) && (Diamonds < -diamonds))
         {

@@ -9,6 +9,8 @@ public class Level : Page
     private const int MAX_BET = 3000;
     private const int BET_STEP = 50;
     private const float SPIN_DELAY = .2f;
+    private const int WILD_ID = 0;
+    private const int MIN_COUNT = 3;
 
     [SerializeField]
     private int levelId = default;
@@ -47,8 +49,8 @@ public class Level : Page
 
     [SerializeField]
     private RectTransform[] columns = default;
+    private List<List<Cell>> cellsBig = new List<List<Cell>>();
     private List<List<Cell>> cells = new List<List<Cell>>();
-    private List<List<int>> cellIds = new List<List<int>>();
 
     [HideInInspector]
     public int cellCounter = 0;
@@ -153,8 +155,8 @@ public class Level : Page
         spinButton.onClick.AddListener(Spin);
         for (var i = 0; i < columns.Length; i++)
         {
-            cells.Add(new List<Cell>());
-            cells[i].AddRange(columns[i].GetComponentsInChildren<Cell>());
+            cellsBig.Add(new List<Cell>());
+            cellsBig[i].AddRange(columns[i].GetComponentsInChildren<Cell>());
         }
         Cell.UpPosition = UpPosition.position.y;
         Cell.DownPosition = DownPosition.position.y;
@@ -229,27 +231,52 @@ public class Level : Page
         {
             return;
         }
-        FillCellIds();
-        foreach (var line in lines)
-        {
-            StartCoroutine(line.Show());
-        }
+        FillCells();
+        winText.text = CheckLines() + "";
+        Purse.AddMoney(CheckLines());
+        coins += CheckLines();
     }
 
-    private void FillCellIds()
+    private void FillCells()
     {
-        cellIds.Clear();
-        for (var i = 0; i < 3; i++)
+        cells.Clear();
+        for (var i = 0; i < 5; i++)
         {
-            cellIds.Add(new List<int>());
+            cells.Add(new List<Cell>());
         }
         for (var i = 1; i < 4; i++)
         {
             for (var j = 0; j < 5; j++)
             {
-                cellIds[i - 1].Add(cells[j][i].GetCellId());
+                cells[j].Add(cellsBig[j][i]);
             }
         }
+    }
+
+    private int CheckLines()
+    {
+        int win = 0;
+        foreach (var typeCell in typeCells)
+        {
+            foreach(var line in lines)
+            {
+                int counter = 0;
+                foreach (var point in line.Points)
+                {
+                    if ((cells[(int)point.x][(int)point.y].TypeCell.Id == typeCell.Id) ||
+                        (cells[(int)point.x][(int)point.y].TypeCell.Id == WILD_ID))
+                    {
+                        counter++;
+                    }
+                }
+                if (counter >= MIN_COUNT)
+                {
+                    win += (int)((float)typeCell.GetScore(counter) * .01f * (float)bet);
+                    StartCoroutine(line.Show());
+                }
+            }
+        }
+        return win;
     }
 
     private void GetLowerBet()
@@ -278,7 +305,7 @@ public class Level : Page
 
     private IEnumerator SpinCoroutine()
     {
-        foreach (var cell in cells)
+        foreach (var cell in cellsBig)
         {
             yield return new WaitForSeconds(SPIN_DELAY);
             foreach (var c in cell)

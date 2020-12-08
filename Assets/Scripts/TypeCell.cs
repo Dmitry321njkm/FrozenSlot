@@ -13,8 +13,7 @@ public class TypeCell
         public int value = default;
     }
 
-    [SerializeField]
-    private int id = default;
+    public int Id = default;
     [SerializeField]
     private Sprite sprite = default;
     [SerializeField]
@@ -23,5 +22,20 @@ public class TypeCell
     public Sprite GetSprite()
     {
         return sprite;
+    }
+
+    public int GetScore(int count)
+    {
+        int maxCount = 0;
+        int value = 0;
+        foreach (var cellValue in cellValues)
+        {
+            if ((count >= cellValue.count) && (maxCount < cellValue.count))
+            {
+                maxCount = cellValue.count;
+                value = cellValue.value;
+            }
+        }
+        return value;
     }
 }

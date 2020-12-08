@@ -19,6 +19,12 @@ public class Achivement : Page
         backButton.onClick.RemoveListener(Back);
     }
 
+    public override void Open()
+    {
+        base.Open();
+        Achivements.SetOpenAchivementsCounter();
+    }
+
     private void Back()
     {
         Close();
