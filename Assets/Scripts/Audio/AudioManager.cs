@@ -6,20 +6,17 @@ public class AudioManager : Singleton<AudioManager>
 {
     private AudioSource _audioManager;
 
-    [SerializeField] private AudioClip _dailyEvents;
+    [SerializeField] private AudioClip _dailyEvents = default;
 
-    [SerializeField] private AudioClip _bigWin;
+    [SerializeField] private AudioClip _bigWin = default;
 
-    [SerializeField] private AudioClip _line;
+    [SerializeField] private AudioClip _line = default;
 
-    [SerializeField] private AudioClip _moneyBalanceAndCristal;
+    [SerializeField] private AudioClip _moneyBalanceAndCristal = default;
 
-    [SerializeField] private AudioClip _scrollingSlots;
+    [SerializeField] private AudioClip _scrollingSlots = default;
 
-    [SerializeField] private AudioClip _scatterWild;
-
-
-    //[SerializeField] private 
+    [SerializeField] private AudioClip _scatterWild = default;
 
     private void Start()
     {

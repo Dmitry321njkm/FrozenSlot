@@ -8,96 +8,182 @@ public class Level : Page
     private const int MIN_BET = 50;
     private const int MAX_BET = 3000;
     private const int BET_STEP = 50;
-    private const float SPIN_DELAY = .35f;
+    private const float SPIN_DELAY = .2f;
 
     [SerializeField]
     private int levelId = default;
 
     [SerializeField]
     private Text coinText = default;
+    protected int _coins;
+    private int coins
+    {
+        get
+        {
+            return _coins;
+        }
+        set
+        {
+            _coins = value;
+            coinText.text = _coins + "";
+        }
+    }
+
     [SerializeField]
     private Text diamondText = default;
+    protected int _diamonds;
+    private int diamonds
+    {
+        get
+        {
+            return _diamonds;
+        }
+        set
+        {
+            _diamonds = value;
+            diamondText.text = _diamonds + "";
+        }
+    }
 
     [SerializeField]
     private RectTransform[] columns = default;
     private List<List<Cell>> cells = new List<List<Cell>>();
+    private List<List<int>> cellIds = new List<List<int>>();
 
     [HideInInspector]
     public int cellCounter = 0;
+
+    protected int _bet = 0;
+    private int bet
+    {
+        get
+        {
+            return _bet;
+        }
+        set
+        {
+            _bet = value;
+            if (_bet < MIN_BET)
+            {
+                _bet = MIN_BET;
+            }
+            if (_bet > MAX_BET)
+            {
+                _bet = MAX_BET;
+            }
+            betText.text = _bet + "";
+        }
+    }
 
     [SerializeField]
     private Text winText = default;
     [SerializeField]
     private Text betText = default;
     [SerializeField]
-    private Button getLowerRateButton = default;
+    private Button getLowerBetButton = default;
     [SerializeField]
-    private Button getUpperRateButton = default;
+    private Button getUpperBetButton = default;
 
     [SerializeField]
-    private Button maxBetButton = default;
+    private Button getMaxBetButton = default;
     [SerializeField]
     private Button spinButton = default;
 
     [SerializeField]
-    private Sprite[] cellImages = default;
+    private TypeCell[] typeCells = default;
+
+    [SerializeField]
+    private RectTransform UpPosition = default;
+    [SerializeField]
+    private RectTransform DownPosition = default;
 
     private new void Awake()
     {
         base.Awake();
         LevelPages[levelId] = this;
+        bet = 0;
+        coins = Purse.Coins;
+        diamonds = Purse.Diamonds;
+        getLowerBetButton.onClick.AddListener(GetLowerBet);
+        getUpperBetButton.onClick.AddListener(GetUpperBet);
+        getMaxBetButton.onClick.AddListener(GetMaxBet);
         spinButton.onClick.AddListener(Spin);
         for (var i = 0; i < columns.Length; i++)
         {
             cells.Add(new List<Cell>());
             cells[i].AddRange(columns[i].GetComponentsInChildren<Cell>());
         }
+        Cell.UpPosition = UpPosition.position.y;
+        Cell.DownPosition = DownPosition.position.y;
     }
 
     private void Spin()
     {
-        if (cellCounter == 0)
+        if ((!IsSpinning()) && (coins >= bet))
         {
+            coins -= bet;
+            Purse.RemoveMoney(bet, 0);
             StartCoroutine(SpinCoroutine());
         }
     }
 
     public Cell.CellSprite GetRandomCellSprite()
     {
-        int rand = Random.Range(0, cellImages.Length);
-        return new Cell.CellSprite(rand, cellImages[rand]);
+        //int rand = Random.Range(0, cellImages.Length);
+        //return new Cell.CellSprite(rand, cellImages[rand]);
+        return new Cell.CellSprite();
+    }
+
+    private bool IsSpinning()
+    {
+        return cellCounter == 0 ? false : true;
     }
 
     public void EndSpin()
     {
-        if (cellCounter != 0)
+        if (!IsSpinning())
         {
-            return;
+            FillCellIds();
         }
-        for (var i = 0; i < cells.Count; i++)
+    }
+
+    private void FillCellIds()
+    {
+        cellIds.Clear();
+        for (var i = 0; i < 3; i++)
         {
-            string str = "";
-            for (var j = 0; j < cells[i].Count; j++)
+            cellIds.Add(new List<int>());
+        }
+        for (var i = 1; i < 4; i++)
+        {
+            for (var j = 0; j < 5; j++)
             {
-                str += cells[i][j].GetName() + " ";
+                cellIds[i - 1].Add(cells[j][i].GetCellId());
             }
-            Debug.Log(str);
         }
     }
 
-    private void AddMoney(int coins, int diamonds)
+    private void GetLowerBet()
     {
-        Purse.AddMoney(coins, diamonds);
-        coinText.text = Purse.Coins + "";
-        diamondText.text = Purse.Diamonds + "";
+        if (!IsSpinning())
+        {
+            bet -= BET_STEP;
+        }
     }
 
-    private void RemoveMoney(int coins, int diamonds)
+    private void GetUpperBet()
     {
-        if (Purse.RemoveMoney(coins, diamonds))
+        if (!IsSpinning())
         {
-            coinText.text = Purse.Coins + "";
-            diamondText.text = Purse.Diamonds + "";
+            bet += BET_STEP;
+        }
+    }
+
+    private void GetMaxBet()
+    {
+        if (!IsSpinning())
+        {
+            bet = MAX_BET;
         }
     }
 

@@ -25,7 +25,7 @@ public static class Achivements
     }
     public static float GetOpenTheGameProcent()
     {
-        return openTheGameCounter / OPEN_THE_GAME_NUMBER;
+        return (float)openTheGameCounter / (float)OPEN_THE_GAME_NUMBER;
     }
 
     private const string FREE_SPIN = "FreeSpin";

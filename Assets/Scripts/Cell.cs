@@ -5,14 +5,15 @@ using UnityEngine.UI;
 
 public class Cell : MonoBehaviour
 {
-    private const float MOVING_SPEED = 40f;
-    private const int CELL_COUNT = 4;
-    private const float CELL_DISTANCE = 260f;
+    private const float MOVING_SPEED = 30f;
+    private const int SPINNING_TIME = 300;
 
     public class CellSprite
     {
-        public int id = default;
-        public Sprite sprite = default;
+        internal int id = default;
+        internal Sprite sprite = default;
+
+        public CellSprite() { }
 
         public CellSprite(int _id, Sprite _sprite)
         {
@@ -24,17 +25,19 @@ public class Cell : MonoBehaviour
     private Level currentLevel = default;
 
     private RectTransform rectTransform = default;
-    private Vector3 startPosition = default;
+    private Vector2 startPosition = default;
 
     private Image cellImage = default;
     private CellSprite cellSprite = default;
 
+    public static float UpPosition = default;
+    public static float DownPosition = default;
+
     private void Awake()
     {
         currentLevel = GetComponentInParent<Level>();
-
         rectTransform = GetComponent<RectTransform>();
-        startPosition = rectTransform.localPosition;
+        startPosition = rectTransform.anchoredPosition;
         cellImage = GetComponentsInChildren<Image>()[1];
         SetImage();
     }
@@ -52,17 +55,17 @@ public class Cell : MonoBehaviour
 
     private void MoveDown()
     {
-        rectTransform.localPosition -= new Vector3(0, MOVING_SPEED, 0);
+        rectTransform.anchoredPosition -= new Vector2(0, MOVING_SPEED);
     }
 
     private void MoveUp()
     {
-        rectTransform.localPosition += new Vector3(0, CELL_COUNT * CELL_DISTANCE, 0);
+        rectTransform.position = new Vector3(rectTransform.position.x, UpPosition, 0);
     }
 
-    private float GetPosY()
+    public float GetPosY()
     {
-        return rectTransform.localPosition.y;
+        return rectTransform.anchoredPosition.y;
     }
 
     public string GetName()
@@ -70,26 +73,36 @@ public class Cell : MonoBehaviour
         return cellImage.sprite.name;
     }
 
+    public int GetCellId()
+    {
+        return cellSprite.id;
+    }
+
     private IEnumerator MoveCoroutine()
     {
         currentLevel.cellCounter++;
-        for (var i = 0; i < 100; i++)
+        for (var i = 0; i < SPINNING_TIME; i++)
         {
             yield return new WaitForEndOfFrame();
             MoveDown();
-            if (GetPosY() < (-500))
+            if (rectTransform.position.y <= DownPosition)
             {
-                MoveUp();
                 SetImage();
+                MoveUp();
             }
         }
         for (; (GetPosY() - startPosition.y) > MOVING_SPEED; )
         {
             yield return new WaitForEndOfFrame();
             MoveDown();
+            if (rectTransform.position.y <= DownPosition)
+            {
+                SetImage();
+                MoveUp();
+            }
         }
         yield return new WaitForEndOfFrame();
-        rectTransform.localPosition = startPosition;
+        rectTransform.anchoredPosition = startPosition;
         currentLevel.cellCounter--;
         currentLevel.EndSpin();
     }
