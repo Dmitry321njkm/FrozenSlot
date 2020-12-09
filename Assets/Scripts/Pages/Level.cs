@@ -142,10 +142,7 @@ public class Level : Page
     {
         base.Awake();
         LevelPages[levelId] = this;
-        bet = LevelsState.Bet;
-        freeSpin = freeSpin;
-        coins = Purse.Coins;
-        diamonds = Purse.Diamonds;
+        
         levelMenuButton.onClick.AddListener(OpenLevelMenu);
         soundSettingsButton.onClick.AddListener(OpenSoundSettings);
         specialEventsButton.onClick.AddListener(OpenSpecialEvents);
@@ -176,6 +173,13 @@ public class Level : Page
     {
         base.Open();
         bet = LevelsState.Bet;
+        freeSpin = freeSpin;
+        coins = Purse.Coins;
+        diamonds = Purse.Diamonds;
+        foreach (var line in lines)
+        {
+            line.Hide();
+        }
     }
 
     private void OpenLevelMenu()
