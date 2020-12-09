@@ -6,6 +6,7 @@ public static class LevelsState
 {
     private const string LEVEL_AVAILIBLE = "LevelAvailible";
     private const string FREE_SPIN = "FreeSpin";
+    private const string BET = "Bet";
     public const int MAX_FREE_SPIN = 10;
 
     public static bool IsLevelAvailible(int levelId)
@@ -43,5 +44,21 @@ public static class LevelsState
     public static void RemoveFreeSpin(int levelId)
     {
         PlayerPrefs.SetInt(levelId + FREE_SPIN, GetFreeSpin(levelId) - 1);
+    }
+
+    public static int Bet
+    {
+        get
+        {
+            if (!PlayerPrefs.HasKey(BET))
+            {
+                Bet = 0;
+            }
+            return PlayerPrefs.GetInt(BET);
+        }
+        set
+        {
+            PlayerPrefs.SetInt(BET, value);
+        }
     }
 }

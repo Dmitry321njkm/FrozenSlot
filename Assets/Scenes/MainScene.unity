@@ -1045,6 +1045,7 @@ MonoBehaviour:
   dailyBonusButton: {fileID: 0}
   achivementsButton: {fileID: 0}
   levelMenu: {fileID: 0}
+  specialEvents: {fileID: 0}
   achivement: {fileID: 0}
   infoPanel: {fileID: 0}
 --- !u!225 &214845374
@@ -4998,6 +4999,80 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1072782198}
   m_CullTransparentMesh: 0
+--- !u!1 &1091470580
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1091470581}
+  - component: {fileID: 1091470583}
+  - component: {fileID: 1091470582}
+  m_Layer: 5
+  m_Name: Lines (06)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1091470581
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091470580}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2934906665608311096}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -4.999999, y: 53.168}
+  m_SizeDelta: {x: -120, y: -75}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1091470582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091470580}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 134bee17f264f441093bafc534792aaf, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1091470583
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091470580}
+  m_CullTransparentMesh: 0
 --- !u!1 &1102721201
 GameObject:
   m_ObjectHideFlags: 0
@@ -5522,6 +5597,7 @@ MonoBehaviour:
   dailyBonusButton: {fileID: 0}
   achivementsButton: {fileID: 0}
   levelMenu: {fileID: 0}
+  specialEvents: {fileID: 0}
   achivement: {fileID: 0}
   infoPanel: {fileID: 0}
 --- !u!225 &1232554229
@@ -9182,6 +9258,7 @@ MonoBehaviour:
   dailyBonusButton: {fileID: 0}
   achivementsButton: {fileID: 0}
   levelMenu: {fileID: 0}
+  specialEvents: {fileID: 0}
   achivement: {fileID: 0}
   infoPanel: {fileID: 0}
 --- !u!225 &1905824753
@@ -9424,6 +9501,7 @@ MonoBehaviour:
   dailyBonusButton: {fileID: 0}
   achivementsButton: {fileID: 0}
   levelMenu: {fileID: 0}
+  specialEvents: {fileID: 0}
   achivement: {fileID: 0}
   infoPanel: {fileID: 0}
 --- !u!225 &1952870373
@@ -9743,6 +9821,7 @@ MonoBehaviour:
   dailyBonusButton: {fileID: 0}
   achivementsButton: {fileID: 0}
   levelMenu: {fileID: 0}
+  specialEvents: {fileID: 0}
   achivement: {fileID: 0}
   infoPanel: {fileID: 0}
 --- !u!225 &2103633756
@@ -10330,6 +10409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TypeCell:
+    typeOfCell: 0
     Id: 0
     sprite: {fileID: 0}
     cellValues: []
@@ -10378,6 +10458,7 @@ RectTransform:
   - {fileID: 2934906665688329012}
   - {fileID: 2934906666263812183}
   - {fileID: 2934906667335918201}
+  - {fileID: 1091470581}
   m_Father: {fileID: 713365313896509349}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10950,7 +11031,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -9.580017, y: 0.045627594}
+  m_AnchoredPosition: {x: -9.579956, y: 0.045627594}
   m_SizeDelta: {x: -1319.8188, y: -0.09123993}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4333617623087971700
@@ -11772,7 +11853,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.14849138, y: 0.21639013}
   m_AnchorMax: {x: 0.14849138, y: 0.21639013}
-  m_AnchoredPosition: {x: -0.35375977, y: -127.999985}
+  m_AnchoredPosition: {x: -0.35375977, y: -127.99997}
   m_SizeDelta: {x: 187.26617, y: 187.26617}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4333617624032654018
@@ -11922,13 +12003,43 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4333617624136633724}
+  - component: {fileID: 4333617624136633729}
+  - component: {fileID: 4333617624136633728}
   m_Layer: 5
   m_Name: SpecialEvents
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
+--- !u!225 &4333617624136633728
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4333617624136633727}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
+--- !u!114 &4333617624136633729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4333617624136633727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f7a96195a7b4dbca24ae506c735718, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backButton: {fileID: 4333617623134578444}
+  soundSettingsButton: {fileID: 4333617623087971700}
+  coinText: {fileID: 4333617624119836467}
+  diamondsText: {fileID: 4333617624406063646}
 --- !u!1 &4333617624203004176
 GameObject:
   m_ObjectHideFlags: 0
@@ -12275,7 +12386,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.36200002, y: 0.209}
   m_AnchorMax: {x: 0.36200002, y: 0.209}
-  m_AnchoredPosition: {x: 0, y: -124.4}
+  m_AnchoredPosition: {x: 0, y: -124.40001}
   m_SizeDelta: {x: 187.26617, y: 187.26617}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4333617624426044127
@@ -12503,7 +12614,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5866229, y: 0.21639013}
   m_AnchorMax: {x: 0.5866229, y: 0.21639013}
-  m_AnchoredPosition: {x: -11.782, y: -128}
+  m_AnchoredPosition: {x: -11.781998, y: -128}
   m_SizeDelta: {x: 187.26617, y: 187.26617}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4333617624673735387
@@ -13013,56 +13124,100 @@ MonoBehaviour:
   freeSpinText: {fileID: 7072056690190371704}
   freeSpinImage: {fileID: 7072056689890547326}
   typeCells:
-  - Id: 0
+  - typeOfCell: 1
+    Id: 0
     sprite: {fileID: 21300000, guid: 7009b17a086944a2389bb11404fab283, type: 3}
     cellValues:
     - count: 5
-      value: 350
-  - Id: 1
+      value: 1000
+  - typeOfCell: 2
+    Id: 1
     sprite: {fileID: 21300000, guid: a1d84c966981548ee890398ee7ebe795, type: 3}
     cellValues:
-    - count: 3
-      value: 6
     - count: 4
-      value: 8
+      value: 1
     - count: 5
-      value: 10
-  - Id: 2
+      value: 3
+  - typeOfCell: 0
+    Id: 2
     sprite: {fileID: 21300000, guid: a4ebbf53f8af84d63a88bcd089a9cc08, type: 3}
     cellValues:
     - count: 3
-      value: 75
+      value: 30
     - count: 4
-      value: 125
+      value: 50
     - count: 5
-      value: 150
-  - Id: 3
+      value: 70
+  - typeOfCell: 0
+    Id: 3
     sprite: {fileID: 21300000, guid: f0db5183743974fa08c6e13dc482b301, type: 3}
     cellValues:
     - count: 3
-      value: 50
+      value: 30
     - count: 4
-      value: 75
+      value: 50
     - count: 5
-      value: 100
-  - Id: 4
+      value: 70
+  - typeOfCell: 3
+    Id: 4
     sprite: {fileID: 21300000, guid: 22807c8ba8d45413e9084f3d15ec390e, type: 3}
     cellValues:
     - count: 3
-      value: 20
-    - count: 4
       value: 30
-    - count: 5
+    - count: 4
       value: 50
-  - Id: 5
+    - count: 5
+      value: 70
+  - typeOfCell: 0
+    Id: 5
     sprite: {fileID: 21300000, guid: 28ff667d2d27440de885a84fbc6ee607, type: 3}
     cellValues:
     - count: 3
-      value: 1
+      value: 30
     - count: 4
-      value: 5
+      value: 50
     - count: 5
-      value: 15
+      value: 70
+  - typeOfCell: 0
+    Id: 6
+    sprite: {fileID: 21300000, guid: d18b6292b77734b53b354f0a881ff2dc, type: 3}
+    cellValues:
+    - count: 3
+      value: 30
+    - count: 4
+      value: 50
+    - count: 5
+      value: 70
+  - typeOfCell: 0
+    Id: 7
+    sprite: {fileID: 21300000, guid: a71f38b0109f5432c8861d45a9390552, type: 3}
+    cellValues:
+    - count: 3
+      value: 30
+    - count: 4
+      value: 50
+    - count: 5
+      value: 70
+  - typeOfCell: 0
+    Id: 8
+    sprite: {fileID: 21300000, guid: dcabb22ec242044c3820e4d69e1784a5, type: 3}
+    cellValues:
+    - count: 3
+      value: 30
+    - count: 4
+      value: 50
+    - count: 5
+      value: 70
+  - typeOfCell: 0
+    Id: 9
+    sprite: {fileID: 21300000, guid: 5577abcffeff64bab818854d05ef987a, type: 3}
+    cellValues:
+    - count: 3
+      value: 30
+    - count: 4
+      value: 50
+    - count: 5
+      value: 70
   lines:
   - image: {fileID: 2934906666939192424}
     Points:
@@ -13099,6 +13254,13 @@ MonoBehaviour:
     - {x: 2, y: 2}
     - {x: 3, y: 1}
     - {x: 4, y: 0}
+  - image: {fileID: 1091470582}
+    Points:
+    - {x: 0, y: 2}
+    - {x: 1, y: 0}
+    - {x: 2, y: 1}
+    - {x: 3, y: 0}
+    - {x: 4, y: 2}
   UpPosition: {fileID: 1995061638}
   DownPosition: {fileID: 170917035}
   levelMenuButton: {fileID: 1955719595}
@@ -13107,6 +13269,7 @@ MonoBehaviour:
   dailyBonusButton: {fileID: 7072056691327321125}
   achivementsButton: {fileID: 7072056691316448425}
   levelMenu: {fileID: 1293658947}
+  specialEvents: {fileID: 4333617624136633729}
   achivement: {fileID: 8585550328932371326}
   infoPanel: {fileID: 593214626}
 --- !u!1 &6077462985497998695
@@ -14590,7 +14753,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 35000
+  m_Text: 
 --- !u!222 &7072056690816127084
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15822,6 +15985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TypeCell:
+    typeOfCell: 0
     Id: 0
     sprite: {fileID: 0}
     cellValues: []
@@ -15953,6 +16117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TypeCell:
+    typeOfCell: 0
     Id: 0
     sprite: {fileID: 0}
     cellValues: []
@@ -16045,6 +16210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TypeCell:
+    typeOfCell: 0
     Id: 0
     sprite: {fileID: 0}
     cellValues: []
@@ -16137,6 +16303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TypeCell:
+    typeOfCell: 0
     Id: 0
     sprite: {fileID: 0}
     cellValues: []
@@ -16266,6 +16433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TypeCell:
+    typeOfCell: 0
     Id: 0
     sprite: {fileID: 0}
     cellValues: []
@@ -16360,6 +16528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TypeCell:
+    typeOfCell: 0
     Id: 0
     sprite: {fileID: 0}
     cellValues: []
@@ -16452,6 +16621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TypeCell:
+    typeOfCell: 0
     Id: 0
     sprite: {fileID: 0}
     cellValues: []
@@ -16544,6 +16714,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TypeCell:
+    typeOfCell: 0
     Id: 0
     sprite: {fileID: 0}
     cellValues: []
@@ -16636,6 +16807,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TypeCell:
+    typeOfCell: 0
     Id: 0
     sprite: {fileID: 0}
     cellValues: []
@@ -16767,6 +16939,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TypeCell:
+    typeOfCell: 0
     Id: 0
     sprite: {fileID: 0}
     cellValues: []
@@ -16859,6 +17032,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TypeCell:
+    typeOfCell: 0
     Id: 0
     sprite: {fileID: 0}
     cellValues: []
@@ -16990,6 +17164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TypeCell:
+    typeOfCell: 0
     Id: 0
     sprite: {fileID: 0}
     cellValues: []
@@ -17082,6 +17257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TypeCell:
+    typeOfCell: 0
     Id: 0
     sprite: {fileID: 0}
     cellValues: []
@@ -17174,6 +17350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TypeCell:
+    typeOfCell: 0
     Id: 0
     sprite: {fileID: 0}
     cellValues: []
@@ -17266,6 +17443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TypeCell:
+    typeOfCell: 0
     Id: 0
     sprite: {fileID: 0}
     cellValues: []
@@ -17395,6 +17573,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TypeCell:
+    typeOfCell: 0
     Id: 0
     sprite: {fileID: 0}
     cellValues: []
@@ -17450,6 +17629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TypeCell:
+    typeOfCell: 0
     Id: 0
     sprite: {fileID: 0}
     cellValues: []
@@ -17542,6 +17722,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TypeCell:
+    typeOfCell: 0
     Id: 0
     sprite: {fileID: 0}
     cellValues: []
@@ -17671,6 +17852,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TypeCell:
+    typeOfCell: 0
     Id: 0
     sprite: {fileID: 0}
     cellValues: []
@@ -23105,7 +23287,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5959717581369901825}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
-  m_BlocksRaycasts: 0
+  m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0

@@ -6,6 +6,14 @@ using System;
 [Serializable]
 public class TypeCell
 {
+    public enum TypeOfCell
+    {
+        Normal,
+        Wild,
+        Scatter,
+        Diamond
+    }
+
     [Serializable]
     public class CellValue
     {
@@ -13,6 +21,7 @@ public class TypeCell
         public int value = default;
     }
 
+    public TypeOfCell typeOfCell = default;
     public int Id = default;
     [SerializeField]
     private Sprite sprite = default;

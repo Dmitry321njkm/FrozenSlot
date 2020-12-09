@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class Cell : MonoBehaviour
 {
-    private const float MOVING_SPEED = 30f;
-    private const int SPINNING_TIME = 300;
+    private const float MOVING_SPEED = 50f; // 50
+    private const int SPINNING_TIME = 50;// 50
 
     private Level currentLevel = default;
 

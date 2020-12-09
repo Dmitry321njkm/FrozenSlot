@@ -8,9 +8,8 @@ public class Level : Page
     private const int MIN_BET = 50;
     private const int MAX_BET = 3000;
     private const int BET_STEP = 50;
-    private const float SPIN_DELAY = .2f;
+    private const float SPIN_DELAY = .1f;
     private const int WILD_ID = 0;
-    private const int MIN_COUNT = 3;
 
     [SerializeField]
     private int levelId = default;
@@ -74,6 +73,7 @@ public class Level : Page
                 _bet = MAX_BET;
             }
             betText.text = _bet + "";
+            LevelsState.Bet = _bet;
         }
     }
 
@@ -132,6 +132,8 @@ public class Level : Page
     [SerializeField]
     private LevelMenu levelMenu = default;
     [SerializeField]
+    private SpecialEvents specialEvents = default;
+    [SerializeField]
     private Achivement achivement = default;
     [SerializeField]
     private Page infoPanel = default;
@@ -140,7 +142,7 @@ public class Level : Page
     {
         base.Awake();
         LevelPages[levelId] = this;
-        bet = 0;
+        bet = LevelsState.Bet;
         freeSpin = freeSpin;
         coins = Purse.Coins;
         diamonds = Purse.Diamonds;
@@ -160,6 +162,22 @@ public class Level : Page
         }
         Cell.UpPosition = UpPosition.position.y;
         Cell.DownPosition = DownPosition.position.y;
+        //StartCoroutine(AutoPlay());
+    }
+
+    private IEnumerator AutoPlay()
+    {
+        for (; ; )
+        {
+            yield return new WaitForSeconds(.5f);
+            Spin();
+        }
+    }
+
+    public override void Open()
+    {
+        base.Open();
+        bet = LevelsState.Bet;
     }
 
     private void OpenLevelMenu()
@@ -181,7 +199,7 @@ public class Level : Page
 
     private void OpenSpecialEvents()
     {
-        //не свертано
+        specialEvents.Open();
     }
 
     private void OpenDailyBonus()
@@ -269,9 +287,22 @@ public class Level : Page
                         counter++;
                     }
                 }
-                if (counter >= MIN_COUNT)
+                if (typeCell.GetScore(counter) > 0)
                 {
-                    win += (int)((float)typeCell.GetScore(counter) * .005f * (float)bet);
+                    if (typeCell.typeOfCell == TypeCell.TypeOfCell.Diamond)
+                    {
+                        diamonds++;
+                        Purse.AddMoney(0, 1);
+                    }
+                    if (typeCell.typeOfCell == TypeCell.TypeOfCell.Scatter)
+                    {
+                        LevelsState.AddFreeSpin(levelId, typeCell.GetScore(counter));
+                        freeSpin = freeSpin;
+                    }
+                    else
+                    {
+                        win += (int)((float)(typeCell.GetScore(counter)) * (float)bet * .01f);
+                    }
                     StartCoroutine(line.Show());
                 }
             }
