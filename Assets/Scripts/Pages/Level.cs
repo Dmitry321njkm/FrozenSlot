@@ -271,7 +271,7 @@ public class Level : Page
                 }
                 if (counter >= MIN_COUNT)
                 {
-                    win += (int)((float)typeCell.GetScore(counter) * .01f * (float)bet);
+                    win += (int)((float)typeCell.GetScore(counter) * .005f * (float)bet);
                     StartCoroutine(line.Show());
                 }
             }
