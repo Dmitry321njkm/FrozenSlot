@@ -5033,7 +5033,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -4.999999, y: 53.168}
+  m_AnchoredPosition: {x: -5, y: 53.168}
   m_SizeDelta: {x: -120, y: -75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1091470582
@@ -5055,7 +5055,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 134bee17f264f441093bafc534792aaf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 88cf5288dcd51404282f2b74d5e1b5db, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13143,81 +13143,81 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: a4ebbf53f8af84d63a88bcd089a9cc08, type: 3}
     cellValues:
     - count: 3
-      value: 30
+      value: 44
     - count: 4
-      value: 50
+      value: 64
     - count: 5
-      value: 70
+      value: 84
   - typeOfCell: 0
     Id: 3
     sprite: {fileID: 21300000, guid: f0db5183743974fa08c6e13dc482b301, type: 3}
     cellValues:
     - count: 3
-      value: 30
+      value: 43
     - count: 4
-      value: 50
-    - count: 5
-      value: 70
-  - typeOfCell: 3
-    Id: 4
-    sprite: {fileID: 21300000, guid: 22807c8ba8d45413e9084f3d15ec390e, type: 3}
-    cellValues:
-    - count: 3
-      value: 30
-    - count: 4
-      value: 50
+      value: 63
     - count: 5
       value: 70
   - typeOfCell: 0
-    Id: 5
+    Id: 4
     sprite: {fileID: 21300000, guid: 28ff667d2d27440de885a84fbc6ee607, type: 3}
     cellValues:
     - count: 3
-      value: 30
+      value: 42
     - count: 4
-      value: 50
+      value: 62
     - count: 5
-      value: 70
+      value: 82
+  - typeOfCell: 3
+    Id: 5
+    sprite: {fileID: 21300000, guid: 22807c8ba8d45413e9084f3d15ec390e, type: 3}
+    cellValues:
+    - count: 3
+      value: 41
+    - count: 4
+      value: 61
+    - count: 5
+      value: 81
   - typeOfCell: 0
     Id: 6
-    sprite: {fileID: 21300000, guid: d18b6292b77734b53b354f0a881ff2dc, type: 3}
+    sprite: {fileID: 21300000, guid: 0860facc7016f476cabb816bae616a89, type: 3}
     cellValues:
     - count: 3
-      value: 30
+      value: 40
     - count: 4
-      value: 50
+      value: 60
     - count: 5
-      value: 70
+      value: 80
   - typeOfCell: 0
     Id: 7
-    sprite: {fileID: 21300000, guid: a71f38b0109f5432c8861d45a9390552, type: 3}
+    sprite: {fileID: 21300000, guid: 3fd3b15bb0c5d4ff48cd6afd8a2c9a43, type: 3}
     cellValues:
     - count: 3
-      value: 30
+      value: 39
     - count: 4
-      value: 50
+      value: 59
     - count: 5
-      value: 70
+      value: 79
   - typeOfCell: 0
     Id: 8
-    sprite: {fileID: 21300000, guid: dcabb22ec242044c3820e4d69e1784a5, type: 3}
+    sprite: {fileID: 21300000, guid: de083875fee094990b6e4d107c0cadba, type: 3}
     cellValues:
     - count: 3
-      value: 30
+      value: 38
     - count: 4
-      value: 50
+      value: 58
     - count: 5
-      value: 70
+      value: 78
   - typeOfCell: 0
     Id: 9
-    sprite: {fileID: 21300000, guid: 5577abcffeff64bab818854d05ef987a, type: 3}
+    sprite: {fileID: 21300000, guid: 0e41beb7adf9a4661b32f922cf1cebe8, type: 3}
     cellValues:
     - count: 3
-      value: 30
+      value: 37
     - count: 4
-      value: 50
+      value: 57
     - count: 5
-      value: 70
+      value: 77
   lines:
   - image: {fileID: 2934906666939192424}
     Points:
@@ -13256,11 +13256,11 @@ MonoBehaviour:
     - {x: 4, y: 0}
   - image: {fileID: 1091470582}
     Points:
-    - {x: 0, y: 2}
-    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 2}
     - {x: 2, y: 1}
-    - {x: 3, y: 0}
-    - {x: 4, y: 2}
+    - {x: 3, y: 2}
+    - {x: 4, y: 1}
   UpPosition: {fileID: 1995061638}
   DownPosition: {fileID: 170917035}
   levelMenuButton: {fileID: 1955719595}
@@ -13284,7 +13284,7 @@ GameObject:
   - component: {fileID: 6837530421803739235}
   - component: {fileID: 1776415455112172859}
   m_Layer: 5
-  m_Name: BackGround
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23287,7 +23287,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5959717581369901825}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0

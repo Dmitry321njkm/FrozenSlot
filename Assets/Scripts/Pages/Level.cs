@@ -214,6 +214,10 @@ public class Level : Page
 
     private void Spin()
     {
+        foreach (var line in lines)
+        {
+            line.Hide();
+        }
         if (IsSpinning())
         {
             return;
@@ -303,7 +307,7 @@ public class Level : Page
                     {
                         win += (int)((float)(typeCell.GetScore(counter)) * (float)bet * .01f);
                     }
-                    StartCoroutine(line.Show());
+                    line.Show();
                 }
             }
         }

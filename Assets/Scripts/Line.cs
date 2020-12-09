@@ -7,16 +7,17 @@ using System;
 [Serializable]
 public class Line
 {
-    private const float TIME_SHOWING = 1.5f;
-
     [SerializeField]
     private Image image = default;
     public Vector2[] Points = default;
 
-    public IEnumerator Show()
+    public void Show()
     {
         image.enabled = true;
-        yield return new WaitForSeconds(TIME_SHOWING);
+    }
+
+    public void Hide()
+    {
         image.enabled = false;
     }
 }
