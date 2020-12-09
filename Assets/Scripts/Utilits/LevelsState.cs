@@ -21,6 +21,7 @@ public static class LevelsState
     public static void UnlockLevel(int levelId)
     {
         PlayerPrefs.SetInt(levelId + LEVEL_AVAILIBLE, 1);
+        Achivements.SetOpenTheLevelCounter();
     }
 
     public static int GetFreeSpin(int levelId)

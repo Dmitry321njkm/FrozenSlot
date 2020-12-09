@@ -12,6 +12,7 @@ public class Page : MonoBehaviour
     public static Menu MenuPage = default;
     public static Level[] LevelPages = new Level[6];
     public static SoundSettings SoundSettingsPage = default;
+    public static DailyBonus DailyBonusPage = default;
 
     public void Awake()
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class AchivementUI : MonoBehaviour
+public class AchivementUI : Page
 {
     [SerializeField] private AchivementCell _openTheGame;
     [SerializeField] private AchivementCell _freeSpin;
@@ -18,10 +18,30 @@ public class AchivementUI : MonoBehaviour
     [SerializeField] private AchivementCell _makeLines;
     [SerializeField] private AchivementCell _openAchivement;
 
+    [SerializeField]
+    private Button backButton = default;
 
-    private void OnEnable()
+    private new void Awake()
     {
+        base.Awake();
+        backButton.onClick.AddListener(Back);
+    }
+
+    private void OnDestroy()
+    {
+        backButton.onClick.RemoveListener(Back);
+    }
+
+    public override void Open()
+    {
+        base.Open();
         CheckValueAchivement();
+        Achivements.SetOpenAchivementsCounter();
+    }
+
+    private void Back()
+    {
+        Close();
     }
 
     void CheckValueAchivement()

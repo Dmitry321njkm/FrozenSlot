@@ -49,6 +49,8 @@ public static class Purse
         }
         Coins += coins;
         Diamonds += diamonds;
+        Achivements.SetCollectMoneyCounter(coins);
+        Achivements.SetCollectDiamondsCounter(diamonds);
         return true;
     }
 

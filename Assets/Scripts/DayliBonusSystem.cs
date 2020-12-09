@@ -5,9 +5,8 @@ using UnityEngine.UI;
 
 public class DayliBonusSystem : MonoBehaviour
 {
-    [SerializeField]
     private int getBonus = 0;
-
+    
     private Button getBonusButton;
 
     [SerializeField]
@@ -15,11 +14,7 @@ public class DayliBonusSystem : MonoBehaviour
 
     private string takeBonus = "TakeBonus";
     private string dataTakeBonus = "DataTakeBonus";
-   
 
-    private int currentSecondTime;
-
-   
     private void OnEnable()
     {
         getBonusButton = GetComponent<Button>();
@@ -52,6 +47,8 @@ public class DayliBonusSystem : MonoBehaviour
     {
         if (getBonus != 1)
         {
+            Page.DailyBonusPage.Open();
+
             lastTimeText.gameObject.SetActive(true);
 
             getBonus = 1;

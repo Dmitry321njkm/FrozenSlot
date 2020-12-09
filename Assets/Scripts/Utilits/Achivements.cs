@@ -51,7 +51,7 @@ public static class Achivements
     }
     public static float GetFreeSpinProcent()
     {
-        return freeSpinCounter / FREE_SPIN_NUMBER;
+        return (float)freeSpinCounter / (float)FREE_SPIN_NUMBER;
     }
 
     private const string SCATTER = "Scatter";
@@ -77,7 +77,7 @@ public static class Achivements
     }
     public static float GetScatterProcent()
     {
-        return scatterCounter / SCATTER_NUMBER;
+        return (float)scatterCounter / (float)SCATTER_NUMBER;
     }
 
     private const string WILD = "Wild";
@@ -103,7 +103,7 @@ public static class Achivements
     }
     public static float GetWildProcent()
     {
-        return wildCounter / WILD_NUMBER;
+        return (float)wildCounter / (float)WILD_NUMBER;
     }
 
     private const string MAX_BET = "MaxBet";
@@ -129,9 +129,10 @@ public static class Achivements
     }
     public static float GetMaxBetProcent()
     {
-        return maxBetCounter / MAX_BET_NUMBER;
+        return (float)maxBetCounter / (float)MAX_BET_NUMBER;
     }
 
+    // TODO;
     private const string COMPLETE_SPECIAL_EVENTS = "CompleteSpetialEvents";
     public const int COMPLETE_SPECIAL_EVENTS_NUMBER = 5;
     private static int completeSpecialEventsCounter
@@ -155,7 +156,7 @@ public static class Achivements
     }
     public static float GetCompleteSpecialEventsProcent()
     {
-        return completeSpecialEventsCounter / COMPLETE_SPECIAL_EVENTS_NUMBER;
+        return (float)completeSpecialEventsCounter / (float)COMPLETE_SPECIAL_EVENTS_NUMBER;
     }
 
     private const string COLLECT_DIAMONDS = "CollectDiamonds";
@@ -175,13 +176,13 @@ public static class Achivements
             PlayerPrefs.SetInt(COLLECT_DIAMONDS, value);
         }
     }
-    public static void SetCollectDiamondsCounter()
+    public static void SetCollectDiamondsCounter(int count)
     {
-        collectDiamondsCounter++;
+        collectDiamondsCounter += count;
     }
     public static float GetCollectDiamondsProcent()
     {
-        return collectDiamondsCounter / COLLECT_DIAMONDS_NUMBER;
+        return (float)collectDiamondsCounter / (float)COLLECT_DIAMONDS_NUMBER;
     }
 
     private const string OPEN_ALL_LEVELS = "OpenAllLevels";
@@ -207,7 +208,7 @@ public static class Achivements
     }
     public static float GetOpenTheLevelProcent()
     {
-        return openTheLevelCounter / OPEN_ALL_LEVELS_NUMBER;
+        return (float)openTheLevelCounter / (float)OPEN_ALL_LEVELS_NUMBER;
     }
 
     private const string COLLECT_MONEY = "ColectMoney";
@@ -227,13 +228,13 @@ public static class Achivements
             PlayerPrefs.SetInt(COLLECT_MONEY, value);
         }
     }
-    public static void SetCollectMoneyCounter()
+    public static void SetCollectMoneyCounter(int count)
     {
-        collectMoneyCounter++;
+        collectMoneyCounter += count;
     }
     public static float GetCollectMoneyProcent()
     {
-        return collectMoneyCounter / COLLECT_MONEY_NUMBER;
+        return (float)collectMoneyCounter / (float)COLLECT_MONEY_NUMBER;
     }
 
     private const string GET_DAILY_BONUS = "GetDailyBonus";
@@ -259,7 +260,7 @@ public static class Achivements
     }
     public static float GetGetDailyBonusCounterProcent()
     {
-        return getDailyBonusCounter / GET_DAILY_BONUS_NUMBER;
+        return (float)getDailyBonusCounter / (float)GET_DAILY_BONUS_NUMBER;
     }
 
     private const string LINES = "Lines";
@@ -285,7 +286,7 @@ public static class Achivements
     }
     public static float GetLinesCounterProcent()
     {
-        return linesCounter / LINES_NUMBER;
+        return (float)linesCounter / (float)LINES_NUMBER;
     }
 
     private const string OPEN_ACHIVEMENTS = "OpenAchivements";
@@ -311,6 +312,6 @@ public static class Achivements
     }
     public static float GetOpenAchivementsCounterProcent()
     {
-        return openAchivementsCounter / OPEN_ACHIVEMENTS_NUMBER;
+        return (float)openAchivementsCounter / (float)OPEN_ACHIVEMENTS_NUMBER;
     }
 }

@@ -134,7 +134,7 @@ public class Level : Page
     [SerializeField]
     private SpecialEvents specialEvents = default;
     [SerializeField]
-    private Achivement achivement = default;
+    private AchivementUI achivement = default;
     [SerializeField]
     private Page infoPanel = default;
 
@@ -149,7 +149,6 @@ public class Level : Page
         levelMenuButton.onClick.AddListener(OpenLevelMenu);
         soundSettingsButton.onClick.AddListener(OpenSoundSettings);
         specialEventsButton.onClick.AddListener(OpenSpecialEvents);
-        dailyBonusButton.onClick.AddListener(OpenDailyBonus);
         achivementsButton.onClick.AddListener(OpenAchivement);
         getLowerBetButton.onClick.AddListener(GetLowerBet);
         getUpperBetButton.onClick.AddListener(GetUpperBet);
@@ -162,7 +161,6 @@ public class Level : Page
         }
         Cell.UpPosition = UpPosition.position.y;
         Cell.DownPosition = DownPosition.position.y;
-        //StartCoroutine(AutoPlay());
     }
 
     private IEnumerator AutoPlay()
@@ -202,11 +200,6 @@ public class Level : Page
         specialEvents.Open();
     }
 
-    private void OpenDailyBonus()
-    {
-        //не сверстано
-    }
-
     private void OpenAchivement()
     {
         achivement.Open();
@@ -224,6 +217,8 @@ public class Level : Page
         }
         if (freeSpin > 0)
         {
+            Achivements.SetFreeSpinCounter();
+            Achivements.SetMaxBetCounter();
             bet = MAX_BET;
             LevelsState.RemoveFreeSpin(levelId);
             freeSpin = freeSpin;
@@ -231,6 +226,10 @@ public class Level : Page
         }
         else if (coins >= bet)
         {
+            if (bet == MAX_BET)
+            {
+                Achivements.SetMaxBetCounter();
+            }
             coins -= bet;
             Purse.RemoveMoney(bet, 0);
             StartCoroutine(SpinCoroutine());
@@ -286,13 +285,18 @@ public class Level : Page
                 foreach (var point in line.Points)
                 {
                     if ((cells[(int)point.x][(int)point.y].TypeCell.Id == typeCell.Id) ||
-                        (cells[(int)point.x][(int)point.y].TypeCell.Id == WILD_ID))
+                        (cells[(int)point.x][(int)point.y].TypeCell.typeOfCell == TypeCell.TypeOfCell.Wild))
                     {
                         counter++;
                     }
                 }
                 if (typeCell.GetScore(counter) > 0)
                 {
+                    Achivements.SetLinesCounter();
+                    if (typeCell.typeOfCell == TypeCell.TypeOfCell.Wild)
+                    {
+                        Achivements.SetWildCounter();
+                    }
                     if (typeCell.typeOfCell == TypeCell.TypeOfCell.Diamond)
                     {
                         diamonds++;
@@ -300,6 +304,7 @@ public class Level : Page
                     }
                     if (typeCell.typeOfCell == TypeCell.TypeOfCell.Scatter)
                     {
+                        Achivements.SetScatterCounter();
                         LevelsState.AddFreeSpin(levelId, typeCell.GetScore(counter));
                         freeSpin = freeSpin;
                     }
