@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class SpecialEventUI : MonoBehaviour
 {
     [SerializeField]
+    private int levelId = default;
+    [SerializeField]
     private Button specialEventButton = default;
     [SerializeField]
     private Text specialEventText = default;
@@ -18,8 +20,8 @@ public class SpecialEventUI : MonoBehaviour
     private void Awake()
     {
         specialEventButton.onClick.AddListener(OpenSpecialEvent);
-        hour = LevelsState.GetRestOfTime(Page.CurrentLevelId).Days * 24 + LevelsState.GetRestOfTime(Page.CurrentLevelId).Hours;
-        minute = LevelsState.GetRestOfTime(Page.CurrentLevelId).Minutes;
+        hour = LevelsState.GetRestOfTime(levelId).Days * 24 + LevelsState.GetRestOfTime(levelId).Hours;
+        minute = LevelsState.GetRestOfTime(levelId).Minutes;
         StartCoroutine(TimerCoroutine());
     }
 

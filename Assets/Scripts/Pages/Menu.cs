@@ -66,7 +66,7 @@ public class Menu : Page
         private string SetMoneyText(int price)
         {
             string endPrice = "";
-            for (; price > 1000; )
+            for (; price >= 1000; )
             {
                 endPrice += "K";
                 price /= 1000;
