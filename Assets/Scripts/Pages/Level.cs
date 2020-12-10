@@ -138,6 +138,8 @@ public class Level : Page
     [SerializeField]
     private Page infoPanel = default;
 
+    private DayliBonusSystem dayliBonusSystem = default;
+
     private new void Awake()
     {
         base.Awake();
@@ -158,6 +160,7 @@ public class Level : Page
         }
         Cell.UpPosition = UpPosition.position.y;
         Cell.DownPosition = DownPosition.position.y;
+        dayliBonusSystem = dailyBonusButton.GetComponent<DayliBonusSystem>();
     }
 
     private IEnumerator AutoPlay()
@@ -180,6 +183,7 @@ public class Level : Page
         {
             line.Hide();
         }
+        dayliBonusSystem.CheckEnabled();
     }
 
     private void OpenLevelMenu()
@@ -215,12 +219,14 @@ public class Level : Page
         {
             line.Hide();
         }
-        if (IsSpinning())
+        if (IsSpinning() || isSpin)
         {
             return;
         }
+        StartCoroutine(IsSpinCoroutine());
         if (freeSpin > 0)
         {
+            SpecialEventsStore.SetDidTenFreeSpins(levelId);
             Achivements.SetFreeSpinCounter();
             Achivements.SetMaxBetCounter();
             bet = MAX_BET;
@@ -240,6 +246,15 @@ public class Level : Page
         }
     }
 
+    private bool isSpin = false;
+
+    private IEnumerator IsSpinCoroutine()
+    {
+        isSpin = true;
+        yield return new WaitForSeconds(1);
+        isSpin = false;
+    }
+
     public TypeCell GetRandomTypeCell()
     {
         return typeCells[Random.Range(0, typeCells.Length)];
@@ -257,8 +272,10 @@ public class Level : Page
             return;
         }
         FillCells();
-        winText.text = CheckLines() + "";
-        Purse.AddMoney(CheckLines());
+        int winCoins = CheckLines();
+        winText.text = winCoins + "";
+        Purse.AddMoney(winCoins);
+        SpecialEventsStore.SetCollectedCoins(levelId, winCoins);
         coins += CheckLines();
     }
 
@@ -305,6 +322,7 @@ public class Level : Page
                     {
                         diamonds++;
                         Purse.AddMoney(0, 1);
+                        SpecialEventsStore.SetCollectedDiamonds(levelId, 1);
                     }
                     if (typeCell.typeOfCell == TypeCell.TypeOfCell.Scatter)
                     {
@@ -321,6 +339,11 @@ public class Level : Page
             }
         }
         return win;
+    }
+
+    public int GetLevelId()
+    {
+        return levelId;
     }
 
     private void GetLowerBet()

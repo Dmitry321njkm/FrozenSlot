@@ -2447,7 +2447,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5293529}
   m_AnchorMax: {x: 0.31436375, y: 1}
-  m_AnchoredPosition: {x: 0.22021484, y: -0.9399986}
+  m_AnchoredPosition: {x: 0.22070312, y: -0.9399986}
   m_SizeDelta: {x: 0.5426636, y: 1.953186}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &60623199
@@ -3782,7 +3782,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.10310223, y: 0.17774957}
   m_AnchorMax: {x: 0.8938979, y: 0.82124156}
-  m_AnchoredPosition: {x: 2.4660645, y: 4.2000732}
+  m_AnchoredPosition: {x: 2.4663086, y: 4.199951}
   m_SizeDelta: {x: 4.3511963, y: 66.08191}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &93660625
@@ -4082,7 +4082,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5293529}
   m_AnchorMax: {x: 0.31436375, y: 1}
-  m_AnchoredPosition: {x: 0.22021484, y: -0.9399986}
+  m_AnchoredPosition: {x: 0.22070312, y: -0.9399986}
   m_SizeDelta: {x: 0.5426636, y: 1.953186}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &102217393
@@ -4359,7 +4359,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.13, y: 0}
   m_AnchorMax: {x: 0.87, y: 1}
-  m_AnchoredPosition: {x: 0, y: -49.019775}
+  m_AnchoredPosition: {x: 0, y: -49.01953}
   m_SizeDelta: {x: 0, y: -98.03949}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &116527981
@@ -5800,10 +5800,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13f7a96195a7b4dbca24ae506c735718, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelId: 0
   backButton: {fileID: 635553422}
   soundSettingsButton: {fileID: 251666088}
   coinText: {fileID: 2128309203}
   diamondsText: {fileID: 812248991}
+  points: []
 --- !u!1 &138213473
 GameObject:
   m_ObjectHideFlags: 0
@@ -13329,7 +13331,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5293529}
   m_AnchorMax: {x: 0.31436375, y: 1}
-  m_AnchoredPosition: {x: 0.22021484, y: -0.9399986}
+  m_AnchoredPosition: {x: 0.22070312, y: -0.9399986}
   m_SizeDelta: {x: 0.5426636, y: 1.953186}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &374160522
@@ -13840,10 +13842,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13f7a96195a7b4dbca24ae506c735718, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelId: 0
   backButton: {fileID: 321774647}
   soundSettingsButton: {fileID: 1435706591}
   coinText: {fileID: 433748741}
   diamondsText: {fileID: 52252555}
+  points: []
 --- !u!1 &384092847
 GameObject:
   m_ObjectHideFlags: 0
@@ -33996,7 +34000,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.13, y: 0}
   m_AnchorMax: {x: 0.87, y: 1}
-  m_AnchoredPosition: {x: 0, y: -49.019775}
+  m_AnchoredPosition: {x: 0, y: -49.01953}
   m_SizeDelta: {x: 0, y: -98.03949}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &938808842
@@ -35942,7 +35946,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.13, y: 0}
   m_AnchorMax: {x: 0.87, y: 1}
-  m_AnchoredPosition: {x: 0, y: -49.019775}
+  m_AnchoredPosition: {x: 0, y: -49.01953}
   m_SizeDelta: {x: 0, y: -98.03949}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &980010974
@@ -38941,7 +38945,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -109.99997}
+  m_AnchoredPosition: {x: 0, y: -109.99988}
   m_SizeDelta: {x: -140, y: -420}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1072870558
@@ -39090,7 +39094,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -119.99997}
+  m_AnchoredPosition: {x: 0, y: -119.99988}
   m_SizeDelta: {x: -26, y: -300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1091470582
@@ -40646,7 +40650,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -109.99997}
+  m_AnchoredPosition: {x: 0, y: -109.99988}
   m_SizeDelta: {x: -140, y: -420}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1130573516
@@ -49770,7 +49774,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.10310223, y: 0.17774957}
   m_AnchorMax: {x: 0.8938979, y: 0.82124156}
-  m_AnchoredPosition: {x: 2.4660645, y: 4.2000732}
+  m_AnchoredPosition: {x: 2.4663086, y: 4.199951}
   m_SizeDelta: {x: 4.3511963, y: 66.08191}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1380111746
@@ -54777,7 +54781,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.10310223, y: 0.17774957}
   m_AnchorMax: {x: 0.8938979, y: 0.82124156}
-  m_AnchoredPosition: {x: 2.4660645, y: 4.2000732}
+  m_AnchoredPosition: {x: 2.4663086, y: 4.199951}
   m_SizeDelta: {x: 4.3511963, y: 66.08191}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1520708184
@@ -62719,7 +62723,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.13, y: 0}
   m_AnchorMax: {x: 0.87, y: 1}
-  m_AnchoredPosition: {x: 0, y: -49.019775}
+  m_AnchoredPosition: {x: 0, y: -49.01953}
   m_SizeDelta: {x: 0, y: -98.03949}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1727630280
@@ -65383,10 +65387,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13f7a96195a7b4dbca24ae506c735718, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelId: 0
   backButton: {fileID: 571019237}
   soundSettingsButton: {fileID: 655738470}
   coinText: {fileID: 1130922163}
   diamondsText: {fileID: 837626480}
+  points: []
 --- !u!1 &1810547716
 GameObject:
   m_ObjectHideFlags: 0
@@ -65473,7 +65479,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5293529}
   m_AnchorMax: {x: 0.31436375, y: 1}
-  m_AnchoredPosition: {x: 0.22021484, y: -0.9399986}
+  m_AnchoredPosition: {x: 0.22070312, y: -0.9399986}
   m_SizeDelta: {x: 0.5426636, y: 1.953186}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1817847378
@@ -66603,10 +66609,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13f7a96195a7b4dbca24ae506c735718, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelId: 0
   backButton: {fileID: 1675046178}
   soundSettingsButton: {fileID: 1142755108}
   coinText: {fileID: 1799494466}
   diamondsText: {fileID: 276900864}
+  points: []
 --- !u!1 &1845368901
 GameObject:
   m_ObjectHideFlags: 0
@@ -73428,7 +73436,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.13, y: 0}
   m_AnchorMax: {x: 0.87, y: 1}
-  m_AnchoredPosition: {x: 0, y: -49.019775}
+  m_AnchoredPosition: {x: 0, y: -49.01953}
   m_SizeDelta: {x: 0, y: -98.03949}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2071966245
@@ -74995,7 +75003,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.10310223, y: 0.17774957}
   m_AnchorMax: {x: 0.8938979, y: 0.82124156}
-  m_AnchoredPosition: {x: 2.4660645, y: 4.2000732}
+  m_AnchoredPosition: {x: 2.4663086, y: 4.199951}
   m_SizeDelta: {x: 4.3511963, y: 66.08191}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2114744219
@@ -77077,7 +77085,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4333617622989322679
 RectTransform:
   m_ObjectHideFlags: 0
@@ -78144,7 +78152,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4333617624136633724}
-  - component: {fileID: 4333617624136633729}
+  - component: {fileID: 4333617624136633730}
   - component: {fileID: 4333617624136633728}
   m_Layer: 5
   m_Name: SpecialEvents
@@ -78165,7 +78173,7 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
---- !u!114 &4333617624136633729
+--- !u!114 &4333617624136633730
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -78174,13 +78182,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 4333617624136633727}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13f7a96195a7b4dbca24ae506c735718, type: 3}
+  m_Script: {fileID: 11500000, guid: c5315fabe0892415cb799c4a9be3338d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelId: 0
   backButton: {fileID: 4333617623134578444}
   soundSettingsButton: {fileID: 4333617623087971700}
   coinText: {fileID: 4333617624119836467}
   diamondsText: {fileID: 4333617624406063646}
+  points:
+  - {fileID: 4333617622989322678}
+  - {fileID: 4333617624203004176}
+  - {fileID: 4333617624800958787}
 --- !u!1 &4333617624203004176
 GameObject:
   m_ObjectHideFlags: 0
@@ -78198,7 +78211,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4333617624203004177
 RectTransform:
   m_ObjectHideFlags: 0
@@ -78709,7 +78722,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.10310223, y: 0.17774957}
   m_AnchorMax: {x: 0.8938979, y: 0.82124156}
-  m_AnchoredPosition: {x: 2.4660645, y: 4.2000732}
+  m_AnchoredPosition: {x: 2.4663086, y: 4.199951}
   m_SizeDelta: {x: 4.3511963, y: 66.08191}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4333617624673735381
@@ -79005,7 +79018,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &4333617624800958790
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -79410,7 +79423,7 @@ MonoBehaviour:
   dailyBonusButton: {fileID: 1224765323138051430}
   achivementsButton: {fileID: 7072056691316448425}
   levelMenu: {fileID: 1293658947}
-  specialEvents: {fileID: 4333617624136633729}
+  specialEvents: {fileID: 4333617624136633730}
   achivement: {fileID: 8585550328932371202}
   infoPanel: {fileID: 593214626}
 --- !u!1 &6077462985497998695
@@ -81857,7 +81870,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5293529}
   m_AnchorMax: {x: 0.31436375, y: 1}
-  m_AnchoredPosition: {x: 0.22021484, y: -0.9399986}
+  m_AnchoredPosition: {x: 0.22070312, y: -0.9399986}
   m_SizeDelta: {x: 0.5426636, y: 1.953186}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7072056691678109739
@@ -94208,7 +94221,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.032686476, y: 0.4384061}
   m_AnchorMax: {x: 0.9583136, y: 0.5593757}
-  m_AnchoredPosition: {x: 0.37426758, y: 0.16000366}
+  m_AnchoredPosition: {x: 0.37402344, y: 0.16000366}
   m_SizeDelta: {x: 0.7531738, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8837649464349682221
@@ -95752,7 +95765,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.13, y: 0}
   m_AnchorMax: {x: 0.87, y: 1}
-  m_AnchoredPosition: {x: 0, y: -49.019775}
+  m_AnchoredPosition: {x: 0, y: -49.01953}
   m_SizeDelta: {x: 0, y: -98.03949}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8837649464450995741
@@ -99623,7 +99636,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.10310223, y: 0.17774957}
   m_AnchorMax: {x: 0.8938979, y: 0.82124156}
-  m_AnchoredPosition: {x: 2.4660645, y: 4.2000732}
+  m_AnchoredPosition: {x: 2.4663086, y: 4.199951}
   m_SizeDelta: {x: 4.3511963, y: 66.08191}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8837649464933138263
@@ -103525,10 +103538,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13f7a96195a7b4dbca24ae506c735718, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelId: 0
   backButton: {fileID: 8837649464723667721}
   soundSettingsButton: {fileID: 8837649465445746213}
   coinText: {fileID: 8837649465106176523}
   diamondsText: {fileID: 8837649463769252314}
+  points: []
 --- !u!225 &8837649465492589543
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -104074,7 +104089,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00012207031, y: -141.99997}
+  m_AnchoredPosition: {x: 0.00048828125, y: -142}
   m_SizeDelta: {x: 0.00024414062, y: -317.15698}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8837649465572350969
@@ -104313,7 +104328,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5293529}
   m_AnchorMax: {x: 0.31436375, y: 1}
-  m_AnchoredPosition: {x: 0.22021484, y: -0.9399986}
+  m_AnchoredPosition: {x: 0.22070312, y: -0.9399986}
   m_SizeDelta: {x: 0.5426636, y: 1.953186}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8837649465582339657

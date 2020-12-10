@@ -15,7 +15,7 @@ public class DayliBonusSystem : MonoBehaviour
     private string takeBonus = "TakeBonus";
     private string dataTakeBonus = "DataTakeBonus";
 
-    private void OnEnable()
+    public void CheckEnabled()
     {
         getBonusButton = GetComponent<Button>();
 

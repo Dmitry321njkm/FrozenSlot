@@ -5,18 +5,18 @@ using UnityEngine.UI;
 
 public class AchivementUI : Page
 {
-    [SerializeField] private AchivementCell _openTheGame;
-    [SerializeField] private AchivementCell _freeSpin;
-    [SerializeField] private AchivementCell _scatter;
-    [SerializeField] private AchivementCell _wild;
-    [SerializeField] private AchivementCell _maxBet;
-    [SerializeField] private AchivementCell _doSpecialEvents;
-    [SerializeField] private AchivementCell _collectDiamond;
-    [SerializeField] private AchivementCell _openAllLevel;
-    [SerializeField] private AchivementCell _collectMoney;
-    [SerializeField] private AchivementCell _getDailyBonus;
-    [SerializeField] private AchivementCell _makeLines;
-    [SerializeField] private AchivementCell _openAchivement;
+    [SerializeField] private AchivementCell _openTheGame = default;
+    [SerializeField] private AchivementCell _freeSpin = default;
+    [SerializeField] private AchivementCell _scatter = default;
+    [SerializeField] private AchivementCell _wild = default;
+    [SerializeField] private AchivementCell _maxBet = default;
+    [SerializeField] private AchivementCell _doSpecialEvents = default;
+    [SerializeField] private AchivementCell _collectDiamond = default;
+    [SerializeField] private AchivementCell _openAllLevel = default;
+    [SerializeField] private AchivementCell _collectMoney = default;
+    [SerializeField] private AchivementCell _getDailyBonus = default;
+    [SerializeField] private AchivementCell _makeLines = default;
+    [SerializeField] private AchivementCell _openAchivement = default;
 
     [SerializeField]
     private Button backButton = default;

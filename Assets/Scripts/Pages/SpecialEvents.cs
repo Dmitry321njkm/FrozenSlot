@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class SpecialEvents : Page
 {
     [SerializeField]
+    internal int levelId = default;
+    [SerializeField]
     private Button backButton = default;
     [SerializeField]
     private Button soundSettingsButton = default;
@@ -13,6 +15,8 @@ public class SpecialEvents : Page
     private Text coinText = default;
     [SerializeField]
     private Text diamondsText = default;
+    [SerializeField]
+    internal GameObject[] points = default;
 
     private new void Awake()
     {
@@ -37,5 +41,15 @@ public class SpecialEvents : Page
     private void OpenSoundSettings()
     {
         SoundSettingsPage.Open();
+    }
+
+    internal void Lock(int id)
+    {
+        points[id].SetActive(false);
+    }
+
+    internal void Unlock(int id)
+    {
+        points[id].SetActive(true);
     }
 }

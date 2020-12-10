@@ -36,6 +36,7 @@ public class DailyBonus : Page
             bonusButtons[i].interactable = true;
             bonusImages[i].SetActive(false);
         }
+        SpecialEventsStore.SetDailyBonusIsGet(0);
     }
 
     private void SetBonus(int count)
