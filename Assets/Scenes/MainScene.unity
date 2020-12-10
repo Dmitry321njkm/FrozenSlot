@@ -4650,7 +4650,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.9647059, g: 0.85882354, b: 0.5686275, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -19137,7 +19137,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 166.09}
+  m_AnchoredPosition: {x: 0, y: 166.08997}
   m_SizeDelta: {x: -50.89734, y: -332.17865}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1256159506518024963
@@ -20029,11 +20029,9 @@ MonoBehaviour:
   DownPosition: {fileID: 1256159506208199226}
   levelMenuButton: {fileID: 1256159505834389689}
   soundSettingsButton: {fileID: 1256159504727919656}
-  specialEventsButton: {fileID: 1256159505537664673}
   dailyBonusButton: {fileID: 1256159506089402782}
   achivementsButton: {fileID: 1256159506476385499}
   levelMenu: {fileID: 1256159505388743968}
-  specialEvents: {fileID: 1256159506095382272}
   achivement: {fileID: 1256159506436912751}
   infoPanel: {fileID: 1256159504836039723}
   spin1: {fileID: 499896303}
@@ -21304,7 +21302,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4142835187755308571}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -26940,11 +26938,9 @@ MonoBehaviour:
   DownPosition: {fileID: 7767413269970495921}
   levelMenuButton: {fileID: 7767413270612360369}
   soundSettingsButton: {fileID: 7767413270638580242}
-  specialEventsButton: {fileID: 715961428236230775}
   dailyBonusButton: {fileID: 8877818233911834748}
   achivementsButton: {fileID: 715961428645218739}
   levelMenu: {fileID: 7767413271024074329}
-  specialEvents: {fileID: 6336423336408094823}
   achivement: {fileID: 2084434069584633368}
   infoPanel: {fileID: 7767413269316987320}
   spin1: {fileID: 499896303}
@@ -34114,11 +34110,9 @@ MonoBehaviour:
   DownPosition: {fileID: 7767413269643038393}
   levelMenuButton: {fileID: 7767413269388767644}
   soundSettingsButton: {fileID: 7767413270913954985}
-  specialEventsButton: {fileID: 7767413270312744277}
   dailyBonusButton: {fileID: 7767413270802971211}
   achivementsButton: {fileID: 7767413269457645751}
   levelMenu: {fileID: 7767413270903859610}
-  specialEvents: {fileID: 7767413270497195046}
   achivement: {fileID: 7767413271132311747}
   infoPanel: {fileID: 7767413270430918764}
   spin1: {fileID: 499896303}
@@ -39670,11 +39664,9 @@ MonoBehaviour:
   DownPosition: {fileID: 7767413270790984916}
   levelMenuButton: {fileID: 7767413271235566954}
   soundSettingsButton: {fileID: 7767413269402427084}
-  specialEventsButton: {fileID: 7767413270916481042}
   dailyBonusButton: {fileID: 7767413269400231106}
   achivementsButton: {fileID: 7767413269628074097}
   levelMenu: {fileID: 7767413270436047451}
-  specialEvents: {fileID: 7767413270533309308}
   achivement: {fileID: 7767413270551766069}
   infoPanel: {fileID: 7767413270005399789}
   spin1: {fileID: 499896303}
@@ -42123,8 +42115,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -9.346191, y: -1500}
-  m_SizeDelta: {x: -18.762573, y: 1000}
+  m_AnchoredPosition: {x: -7.98999, y: -1500}
+  m_SizeDelta: {x: -16.057007, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7767413269542814163
 MonoBehaviour:
@@ -44718,8 +44710,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -9.36377, y: -2400}
-  m_SizeDelta: {x: -18.72754, y: 800}
+  m_AnchoredPosition: {x: -8.009277, y: -2400}
+  m_SizeDelta: {x: -16.018555, y: 800}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7767413269626287021
 MonoBehaviour:
@@ -52336,7 +52328,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 50x
+  m_Text: 5000x
 --- !u!222 &7767413269811518891
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -60876,11 +60868,9 @@ MonoBehaviour:
   DownPosition: {fileID: 7767413269898925473}
   levelMenuButton: {fileID: 7767413270605667799}
   soundSettingsButton: {fileID: 7767413271150048605}
-  specialEventsButton: {fileID: 7767413270968551680}
   dailyBonusButton: {fileID: 7767413271286329589}
   achivementsButton: {fileID: 7767413270907763984}
   levelMenu: {fileID: 7767413270502100306}
-  specialEvents: {fileID: 7767413270003765022}
   achivement: {fileID: 7767413269886075325}
   infoPanel: {fileID: 7767413270632152785}
   spin1: {fileID: 499896303}
@@ -67756,7 +67746,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.28500003}
   m_AnchorMax: {x: 0.5, y: 0.28500003}
-  m_AnchoredPosition: {x: 0, y: 143.51}
+  m_AnchoredPosition: {x: 0, y: 143.51001}
   m_SizeDelta: {x: 492.62683, y: 191.21027}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7767413270263379334
@@ -83928,11 +83918,9 @@ MonoBehaviour:
   DownPosition: {fileID: 7767413270166262818}
   levelMenuButton: {fileID: 7767413269714741724}
   soundSettingsButton: {fileID: 7767413269854055818}
-  specialEventsButton: {fileID: 7767413269753003423}
   dailyBonusButton: {fileID: 7767413269367990797}
   achivementsButton: {fileID: 7767413270212695453}
   levelMenu: {fileID: 7767413271367066083}
-  specialEvents: {fileID: 7767413270047513416}
   achivement: {fileID: 7767413270294320164}
   infoPanel: {fileID: 7767413270466395680}
   spin1: {fileID: 499896303}
@@ -84189,7 +84177,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 129.99997}
+  m_AnchoredPosition: {x: 0, y: 130}
   m_SizeDelta: {x: -140, y: -420}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7767413270708474465
@@ -104201,7 +104189,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 150x
+  m_Text: 15000x
 --- !u!222 &7767413271307128045
 CanvasRenderer:
   m_ObjectHideFlags: 0
