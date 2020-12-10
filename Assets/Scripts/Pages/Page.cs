@@ -11,6 +11,7 @@ public class Page : MonoBehaviour
     public static StartScreen StartScreenPage = default;
     public static Menu MenuPage = default;
     public static Level[] LevelPages = new Level[6];
+    public static int CurrentLevelId = 0;
     public static SoundSettings SoundSettingsPage = default;
     public static DailyBonus DailyBonusPage = default;
 

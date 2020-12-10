@@ -9,7 +9,6 @@ public static class SpecialEventsStore
     private const string DID_TEN_FREE_SPINS = "DidTenFreeSpins";
     private const string DAILY_BONUS_GET = "DailyBonusGet";
 
-
     public static int GetCollectedCoins(int levelId)
     {
         if (!PlayerPrefs.HasKey(levelId + COLLECTED_COINS))
@@ -75,3 +74,4 @@ public static class SpecialEventsStore
         PlayerPrefs.SetInt(levelId + DAILY_BONUS_GET, 1);
     }
 }
+

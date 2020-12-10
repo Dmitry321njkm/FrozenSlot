@@ -268,7 +268,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1556997438 stripped
 Transform:
@@ -15521,7 +15521,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -141.99998}
+  m_AnchoredPosition: {x: 0, y: -142}
   m_SizeDelta: {x: 0.00024414062, y: -317.15698}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1256159506040917731
@@ -16208,24 +16208,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lastTimeText: {fileID: 1256159506284318572}
---- !u!114 &1256159506095382268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1256159506095382271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13f7a96195a7b4dbca24ae506c735718, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelId: 0
-  backButton: {fileID: 1256159506335182355}
-  soundSettingsButton: {fileID: 1256159505914286911}
-  coinText: {fileID: 1256159506782736145}
-  diamondsText: {fileID: 1256159505447883968}
-  points: []
 --- !u!225 &1256159506095382269
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -16269,7 +16251,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1256159506095382270}
-  - component: {fileID: 1256159506095382268}
+  - component: {fileID: 1256159506095382272}
   - component: {fileID: 1256159506095382269}
   m_Layer: 5
   m_Name: SpecialEvents
@@ -16278,6 +16260,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1256159506095382272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1256159506095382271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2de54c1ce0ce042edb327183cce0323d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelId: 5
+  backButton: {fileID: 1256159506335182355}
+  soundSettingsButton: {fileID: 1256159505914286911}
+  coinText: {fileID: 1256159506782736145}
+  diamondsText: {fileID: 1256159505447883968}
+  points:
+  - {fileID: 1256159505526702375}
+  - {fileID: 1256159505307657355}
+  - {fileID: 1256159505747846937}
 --- !u!114 &1256159506096085168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19561,7 +19564,7 @@ MonoBehaviour:
   dailyBonusButton: {fileID: 1256159506089402782}
   achivementsButton: {fileID: 1256159506476385499}
   levelMenu: {fileID: 1256159505388743968}
-  specialEvents: {fileID: 1256159506095382268}
+  specialEvents: {fileID: 1256159506095382272}
   achivement: {fileID: 1256159506436912751}
   infoPanel: {fileID: 1256159504836039723}
 --- !u!224 &1256159506574518609
@@ -26470,7 +26473,7 @@ MonoBehaviour:
   dailyBonusButton: {fileID: 8877818233911834748}
   achivementsButton: {fileID: 715961428645218739}
   levelMenu: {fileID: 7767413271024074329}
-  specialEvents: {fileID: 6336423336408094875}
+  specialEvents: {fileID: 6336423336408094823}
   achivement: {fileID: 2084434069584633368}
   infoPanel: {fileID: 7767413269316987320}
 --- !u!1 &4142835187755308571
@@ -28396,7 +28399,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6336423336408094822}
-  - component: {fileID: 6336423336408094875}
+  - component: {fileID: 6336423336408094823}
   - component: {fileID: 6336423336408094874}
   m_Layer: 5
   m_Name: SpecialEvents
@@ -28427,6 +28430,27 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6336423336408094823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6336423336408094821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5315fabe0892415cb799c4a9be3338d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelId: 0
+  backButton: {fileID: 6336423335540290070}
+  soundSettingsButton: {fileID: 6336423335560685678}
+  coinText: {fileID: 6336423336391223849}
+  diamondsText: {fileID: 6336423336675421956}
+  points:
+  - {fileID: 6336423335394962604}
+  - {fileID: 6336423336606620682}
+  - {fileID: 6336423335998704729}
 --- !u!225 &6336423336408094874
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -28439,24 +28463,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
---- !u!114 &6336423336408094875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6336423336408094821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13f7a96195a7b4dbca24ae506c735718, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelId: 0
-  backButton: {fileID: 6336423335540290070}
-  soundSettingsButton: {fileID: 6336423335560685678}
-  coinText: {fileID: 6336423336391223849}
-  diamondsText: {fileID: 6336423336675421956}
-  points: []
 --- !u!1 &6336423336503306022
 GameObject:
   m_ObjectHideFlags: 0
@@ -33639,7 +33645,7 @@ MonoBehaviour:
   dailyBonusButton: {fileID: 7767413270802971211}
   achivementsButton: {fileID: 7767413269457645751}
   levelMenu: {fileID: 7767413270903859610}
-  specialEvents: {fileID: 7767413270497195096}
+  specialEvents: {fileID: 7767413270497195046}
   achivement: {fileID: 7767413271132311747}
   infoPanel: {fileID: 7767413270430918764}
 --- !u!1 &7767413269346723163
@@ -39193,7 +39199,7 @@ MonoBehaviour:
   dailyBonusButton: {fileID: 7767413269400231106}
   achivementsButton: {fileID: 7767413269628074097}
   levelMenu: {fileID: 7767413270436047451}
-  specialEvents: {fileID: 7767413270533309310}
+  specialEvents: {fileID: 7767413270533309308}
   achivement: {fileID: 7767413270551766069}
   infoPanel: {fileID: 7767413270005399789}
 --- !u!1 &7767413269482344359
@@ -42970,7 +42976,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -450, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &7767413269593702000
@@ -45574,7 +45580,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.4237256}
   m_AnchorMax: {x: 0, y: 0.4237256}
-  m_AnchoredPosition: {x: 114.090454, y: 3.080017}
+  m_AnchoredPosition: {x: 114.09033, y: 3.080017}
   m_SizeDelta: {x: 229.86453, y: 276.3029}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7767413269659516283
@@ -45831,7 +45837,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -109.999985}
+  m_AnchoredPosition: {x: 0, y: -110}
   m_SizeDelta: {x: -140, y: -420}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7767413269663456482
@@ -52416,7 +52422,7 @@ RectTransform:
   - {fileID: 7767413270142519007}
   - {fileID: 7767413270389105622}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -59110,24 +59116,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
---- !u!114 &7767413270003765011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7767413270003765020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13f7a96195a7b4dbca24ae506c735718, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelId: 0
-  backButton: {fileID: 7767413269294289812}
-  soundSettingsButton: {fileID: 7767413269917125554}
-  coinText: {fileID: 7767413270717906633}
-  diamondsText: {fileID: 7767413269605202565}
-  points: []
 --- !u!1 &7767413270003765020
 GameObject:
   m_ObjectHideFlags: 0
@@ -59137,7 +59125,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7767413270003765021}
-  - component: {fileID: 7767413270003765011}
+  - component: {fileID: 7767413270003765022}
   - component: {fileID: 7767413270003765010}
   m_Layer: 5
   m_Name: SpecialEvents
@@ -59168,6 +59156,27 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7767413270003765022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7767413270003765020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc23e71a751984f24b158dfb99a0f6a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelId: 3
+  backButton: {fileID: 7767413269294289812}
+  soundSettingsButton: {fileID: 7767413269917125554}
+  coinText: {fileID: 7767413270717906633}
+  diamondsText: {fileID: 7767413269605202565}
+  points:
+  - {fileID: 7767413271097118883}
+  - {fileID: 7767413269938742366}
+  - {fileID: 7767413269887442278}
 --- !u!222 &7767413270005399776
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -60392,7 +60401,7 @@ MonoBehaviour:
   dailyBonusButton: {fileID: 7767413271286329589}
   achivementsButton: {fileID: 7767413270907763984}
   levelMenu: {fileID: 7767413270502100306}
-  specialEvents: {fileID: 7767413270003765011}
+  specialEvents: {fileID: 7767413270003765022}
   achivement: {fileID: 7767413269886075325}
   infoPanel: {fileID: 7767413270632152785}
 --- !u!225 &7767413270037759311
@@ -60754,24 +60763,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
---- !u!114 &7767413270047513413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7767413270047513414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13f7a96195a7b4dbca24ae506c735718, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelId: 0
-  backButton: {fileID: 7767413270121361709}
-  soundSettingsButton: {fileID: 7767413271166185925}
-  coinText: {fileID: 7767413270298406431}
-  diamondsText: {fileID: 7767413269849807505}
-  points: []
 --- !u!1 &7767413270047513414
 GameObject:
   m_ObjectHideFlags: 0
@@ -60781,7 +60772,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7767413270047513415}
-  - component: {fileID: 7767413270047513413}
+  - component: {fileID: 7767413270047513416}
   - component: {fileID: 7767413270047513412}
   m_Layer: 5
   m_Name: SpecialEvents
@@ -60812,6 +60803,27 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7767413270047513416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7767413270047513414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a44b5bcdb061643e3ba75721cd9b151d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelId: 2
+  backButton: {fileID: 7767413270121361709}
+  soundSettingsButton: {fileID: 7767413271166185925}
+  coinText: {fileID: 7767413270298406431}
+  diamondsText: {fileID: 7767413269849807505}
+  points:
+  - {fileID: 7767413271208194115}
+  - {fileID: 7767413269699250986}
+  - {fileID: 7767413271024836985}
 --- !u!222 &7767413270049464232
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -63531,7 +63543,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7767413270142519006}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 0.97
   m_Interactable: 1
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -72688,7 +72700,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 450, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7767413270405568006
@@ -74551,7 +74563,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -144.99998}
+  m_AnchoredPosition: {x: 0, y: -145}
   m_SizeDelta: {x: -60, y: -350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7767413270445431928
@@ -76390,7 +76402,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7767413270497195098}
-  - component: {fileID: 7767413270497195096}
+  - component: {fileID: 7767413270497195046}
   - component: {fileID: 7767413270497195099}
   m_Layer: 5
   m_Name: SpecialEvents
@@ -76399,7 +76411,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &7767413270497195096
+--- !u!114 &7767413270497195046
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -76408,15 +76420,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 7767413270497195045}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13f7a96195a7b4dbca24ae506c735718, type: 3}
+  m_Script: {fileID: 11500000, guid: 0980fdc7c5e48494ebf3d2ff5e172060, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelId: 0
+  levelId: 4
   backButton: {fileID: 7767413270398892088}
   soundSettingsButton: {fileID: 7767413270873233982}
   coinText: {fileID: 7767413270525431384}
   diamondsText: {fileID: 7767413270143695130}
-  points: []
+  points:
+  - {fileID: 7767413271078154144}
+  - {fileID: 7767413269517861195}
+  - {fileID: 7767413269391356349}
 --- !u!224 &7767413270497195098
 RectTransform:
   m_ObjectHideFlags: 0
@@ -77474,7 +77489,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7767413270533309304}
-  - component: {fileID: 7767413270533309310}
+  - component: {fileID: 7767413270533309308}
   - component: {fileID: 7767413270533309305}
   m_Layer: 5
   m_Name: SpecialEvents
@@ -77483,7 +77498,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &7767413270533309310
+--- !u!114 &7767413270533309308
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -77492,15 +77507,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 7767413270533309307}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13f7a96195a7b4dbca24ae506c735718, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f5b1028ddab84700b9053ca141bf813, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelId: 0
+  levelId: 1
   backButton: {fileID: 7767413269296962303}
   soundSettingsButton: {fileID: 7767413269245268860}
   coinText: {fileID: 7767413270930544041}
   diamondsText: {fileID: 7767413269630680938}
-  points: []
+  points:
+  - {fileID: 7767413269355173862}
+  - {fileID: 7767413271228797389}
+  - {fileID: 7767413270525273892}
 --- !u!1 &7767413270534099624
 GameObject:
   m_ObjectHideFlags: 0
@@ -82874,7 +82892,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.39620206}
   m_AnchorMax: {x: 0, y: 0.39620206}
-  m_AnchoredPosition: {x: 122.44006, y: 5.3599854}
+  m_AnchoredPosition: {x: 122.43994, y: 5.3599854}
   m_SizeDelta: {x: 243.86993, y: 243.2709}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7767413270694906393
@@ -83204,7 +83222,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.684}
   m_AnchorMax: {x: 0, y: 0.684}
-  m_AnchoredPosition: {x: 122.94006, y: 0}
+  m_AnchoredPosition: {x: 122.93994, y: 0}
   m_SizeDelta: {x: 374.56363, y: 323.08167}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7767413270703680548
@@ -83432,7 +83450,7 @@ MonoBehaviour:
   dailyBonusButton: {fileID: 7767413269367990797}
   achivementsButton: {fileID: 7767413270212695453}
   levelMenu: {fileID: 7767413271367066083}
-  specialEvents: {fileID: 7767413270047513413}
+  specialEvents: {fileID: 7767413270047513416}
   achivement: {fileID: 7767413270294320164}
   infoPanel: {fileID: 7767413270466395680}
 --- !u!225 &7767413270703680603
@@ -87443,7 +87461,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 67.23001, y: 67.23001}
+  m_AnchoredPosition: {x: 67.22998, y: 67.22998}
   m_SizeDelta: {x: 134.46512, y: 134.46512}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7767413270846235263
@@ -90159,7 +90177,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -109.999985}
+  m_AnchoredPosition: {x: 0, y: -110}
   m_SizeDelta: {x: -140, y: -420}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7767413270930258902
@@ -90833,7 +90851,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -119.999985}
+  m_AnchoredPosition: {x: 0, y: -120}
   m_SizeDelta: {x: -26, y: -300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7767413270959885217
@@ -106134,7 +106152,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -144.99998}
+  m_AnchoredPosition: {x: 0, y: -145}
   m_SizeDelta: {x: -60, y: -350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7767413271363402830

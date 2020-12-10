@@ -36,7 +36,7 @@ public class DailyBonus : Page
             bonusButtons[i].interactable = true;
             bonusImages[i].SetActive(false);
         }
-        SpecialEventsStore.SetDailyBonusIsGet(0);
+        SpecialEventsStore.SetDailyBonusIsGet(CurrentLevelId);
     }
 
     private void SetBonus(int count)
@@ -54,8 +54,10 @@ public class DailyBonus : Page
             bonusButtons[i].interactable = false;
         }
         bonusButtons[count].gameObject.SetActive(false);
-        bonusImages[count].SetActive(true);
-        switch (count)
+        int rand = Random.Range(0, bonusImages.Length);
+        bonusImages[rand].SetActive(true);
+        bonusImages[rand].transform.position = new Vector3(bonusButtons[count].transform.position.x, 0f, 0f);
+        switch (rand)
         {
             case 0:
                 Purse.AddMoney(0, 100);
@@ -66,6 +68,10 @@ public class DailyBonus : Page
             case 2:
                 Purse.AddMoney(150, 100);
                 break;
+        }
+        foreach (var level in LevelPages)
+        {
+            level.UpdateMoney();
         }
         yield return new WaitForSeconds(TIME_DELAY);
         Close();

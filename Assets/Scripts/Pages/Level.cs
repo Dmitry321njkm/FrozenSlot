@@ -175,6 +175,7 @@ public class Level : Page
     public override void Open()
     {
         base.Open();
+        CurrentLevelId = levelId;
         bet = LevelsState.Bet;
         freeSpin = freeSpin;
         coins = Purse.Coins;
@@ -244,6 +245,12 @@ public class Level : Page
             Purse.RemoveMoney(bet, 0);
             StartCoroutine(SpinCoroutine());
         }
+    }
+
+    public void UpdateMoney()
+    {
+        coins = Purse.Coins;
+        diamonds = Purse.Diamonds;
     }
 
     private bool isSpin = false;

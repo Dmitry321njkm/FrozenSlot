@@ -101,10 +101,6 @@ public class Menu : Page
             LevelsState.UnlockLevel(0);
         }
         soundSettingsButton.onClick.AddListener(OpenSoundSettings);
-        foreach (var levelButton in levelButtons)
-        {
-            levelButton.Init();
-        }
     }
 
     private void OnDestroy()
@@ -116,7 +112,10 @@ public class Menu : Page
     public override void Open()
     {
         base.Open();
-
+        foreach (var levelButton in levelButtons)
+        {
+            levelButton.Init();
+        }
     }
 
     private void OpenSoundSettings()
