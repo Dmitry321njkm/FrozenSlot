@@ -20029,9 +20029,11 @@ MonoBehaviour:
   DownPosition: {fileID: 1256159506208199226}
   levelMenuButton: {fileID: 1256159505834389689}
   soundSettingsButton: {fileID: 1256159504727919656}
+  specialEventsButton: {fileID: 1256159505537664673}
   dailyBonusButton: {fileID: 1256159506089402782}
   achivementsButton: {fileID: 1256159506476385499}
   levelMenu: {fileID: 1256159505388743968}
+  specialEvents: {fileID: 1256159506095382272}
   achivement: {fileID: 1256159506436912751}
   infoPanel: {fileID: 1256159504836039723}
   spin1: {fileID: 499896303}
@@ -26938,9 +26940,11 @@ MonoBehaviour:
   DownPosition: {fileID: 7767413269970495921}
   levelMenuButton: {fileID: 7767413270612360369}
   soundSettingsButton: {fileID: 7767413270638580242}
+  specialEventsButton: {fileID: 715961428236230775}
   dailyBonusButton: {fileID: 8877818233911834748}
   achivementsButton: {fileID: 715961428645218739}
   levelMenu: {fileID: 7767413271024074329}
+  specialEvents: {fileID: 6336423336408094823}
   achivement: {fileID: 2084434069584633368}
   infoPanel: {fileID: 7767413269316987320}
   spin1: {fileID: 499896303}
@@ -34110,9 +34114,11 @@ MonoBehaviour:
   DownPosition: {fileID: 7767413269643038393}
   levelMenuButton: {fileID: 7767413269388767644}
   soundSettingsButton: {fileID: 7767413270913954985}
+  specialEventsButton: {fileID: 7767413270312744277}
   dailyBonusButton: {fileID: 7767413270802971211}
   achivementsButton: {fileID: 7767413269457645751}
   levelMenu: {fileID: 7767413270903859610}
+  specialEvents: {fileID: 7767413270497195046}
   achivement: {fileID: 7767413271132311747}
   infoPanel: {fileID: 7767413270430918764}
   spin1: {fileID: 499896303}
@@ -39664,9 +39670,11 @@ MonoBehaviour:
   DownPosition: {fileID: 7767413270790984916}
   levelMenuButton: {fileID: 7767413271235566954}
   soundSettingsButton: {fileID: 7767413269402427084}
+  specialEventsButton: {fileID: 7767413270916481042}
   dailyBonusButton: {fileID: 7767413269400231106}
   achivementsButton: {fileID: 7767413269628074097}
   levelMenu: {fileID: 7767413270436047451}
+  specialEvents: {fileID: 7767413270533309308}
   achivement: {fileID: 7767413270551766069}
   infoPanel: {fileID: 7767413270005399789}
   spin1: {fileID: 499896303}
@@ -46306,7 +46314,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -109.999756}
+  m_AnchoredPosition: {x: 0, y: -109.99988}
   m_SizeDelta: {x: -140, y: -420}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7767413269663456482
@@ -51510,7 +51518,6 @@ GameObject:
   - component: {fileID: 7767413269789348471}
   - component: {fileID: 7767413269789348469}
   - component: {fileID: 7767413269789348468}
-  - component: {fileID: 7767413269789348472}
   m_Layer: 5
   m_Name: ChestButton
   m_TagString: Untagged
@@ -51538,22 +51545,6 @@ RectTransform:
   m_AnchoredPosition: {x: -140.60986, y: 5.4000244}
   m_SizeDelta: {x: 282.838, y: 306.97876}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7767413269789348472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7767413269789348470}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c004aa72f52ed4339b3d4f447c9a8926, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelId: 4
-  specialEventButton: {fileID: 7767413270312744277}
-  specialEventText: {fileID: 7767413271008038487}
-  SpecialEvent: {fileID: 7767413270497195046}
 --- !u!224 &7767413269789961896
 RectTransform:
   m_ObjectHideFlags: 0
@@ -55612,7 +55603,6 @@ GameObject:
   - component: {fileID: 7767413269897411785}
   - component: {fileID: 7767413269897411791}
   - component: {fileID: 7767413269897411790}
-  - component: {fileID: 7767413269897411786}
   m_Layer: 5
   m_Name: ChestButton
   m_TagString: Untagged
@@ -55640,22 +55630,6 @@ RectTransform:
   m_AnchoredPosition: {x: -116.6499, y: 0.83898926}
   m_SizeDelta: {x: 233.80966, y: 246.00024}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7767413269897411786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7767413269897411784}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c004aa72f52ed4339b3d4f447c9a8926, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelId: 1
-  specialEventButton: {fileID: 7767413270916481042}
-  specialEventText: {fileID: 7767413271035972470}
-  SpecialEvent: {fileID: 7767413270533309308}
 --- !u!114 &7767413269897411790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60902,9 +60876,11 @@ MonoBehaviour:
   DownPosition: {fileID: 7767413269898925473}
   levelMenuButton: {fileID: 7767413270605667799}
   soundSettingsButton: {fileID: 7767413271150048605}
+  specialEventsButton: {fileID: 7767413270968551680}
   dailyBonusButton: {fileID: 7767413271286329589}
   achivementsButton: {fileID: 7767413270907763984}
   levelMenu: {fileID: 7767413270502100306}
+  specialEvents: {fileID: 7767413270003765022}
   achivement: {fileID: 7767413269886075325}
   infoPanel: {fileID: 7767413270632152785}
   spin1: {fileID: 499896303}
@@ -61749,7 +61725,6 @@ GameObject:
   - component: {fileID: 7767413270059901547}
   - component: {fileID: 7767413270059901545}
   - component: {fileID: 7767413270059901544}
-  - component: {fileID: 7767413270059901548}
   m_Layer: 5
   m_Name: ChestButton
   m_TagString: Untagged
@@ -61777,22 +61752,6 @@ RectTransform:
   m_AnchoredPosition: {x: -133.00238, y: 58}
   m_SizeDelta: {x: 266.00476, y: 261.3259}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7767413270059901548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7767413270059901546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c004aa72f52ed4339b3d4f447c9a8926, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelId: 0
-  specialEventButton: {fileID: 715961428236230775}
-  specialEventText: {fileID: 715961429153662327}
-  SpecialEvent: {fileID: 6336423336408094823}
 --- !u!114 &7767413270059974666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83969,9 +83928,11 @@ MonoBehaviour:
   DownPosition: {fileID: 7767413270166262818}
   levelMenuButton: {fileID: 7767413269714741724}
   soundSettingsButton: {fileID: 7767413269854055818}
+  specialEventsButton: {fileID: 7767413269753003423}
   dailyBonusButton: {fileID: 7767413269367990797}
   achivementsButton: {fileID: 7767413270212695453}
   levelMenu: {fileID: 7767413271367066083}
+  specialEvents: {fileID: 7767413270047513416}
   achivement: {fileID: 7767413270294320164}
   infoPanel: {fileID: 7767413270466395680}
   spin1: {fileID: 499896303}
@@ -85259,7 +85220,6 @@ GameObject:
   - component: {fileID: 7767413270731470441}
   - component: {fileID: 7767413270731470447}
   - component: {fileID: 7767413270731470446}
-  - component: {fileID: 7767413270731470442}
   m_Layer: 5
   m_Name: ChestButton
   m_TagString: Untagged
@@ -85287,22 +85247,6 @@ RectTransform:
   m_AnchoredPosition: {x: -106, y: 0}
   m_SizeDelta: {x: 299.2879, y: 320.14075}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7767413270731470442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7767413270731470440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c004aa72f52ed4339b3d4f447c9a8926, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelId: 3
-  specialEventButton: {fileID: 7767413270968551680}
-  specialEventText: {fileID: 7767413271000364412}
-  SpecialEvent: {fileID: 7767413270003765022}
 --- !u!114 &7767413270731470446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90718,7 +90662,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -109.999756}
+  m_AnchoredPosition: {x: 0, y: -109.99988}
   m_SizeDelta: {x: -140, y: -420}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7767413270930258902
@@ -91392,7 +91336,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -119.999756}
+  m_AnchoredPosition: {x: 0, y: -119.99988}
   m_SizeDelta: {x: -26, y: -300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7767413270959885217
@@ -97089,7 +97033,6 @@ GameObject:
   - component: {fileID: 7767413271114539728}
   - component: {fileID: 7767413271114539734}
   - component: {fileID: 7767413271114539729}
-  - component: {fileID: 7767413271114539732}
   m_Layer: 5
   m_Name: ChestButton
   m_TagString: Untagged
@@ -97097,22 +97040,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &7767413271114539732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7767413271114539731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c004aa72f52ed4339b3d4f447c9a8926, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelId: 2
-  specialEventButton: {fileID: 7767413269753003423}
-  specialEventText: {fileID: 7767413270663673199}
-  SpecialEvent: {fileID: 7767413270047513416}
 --- !u!222 &7767413271114539734
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -106382,7 +106309,6 @@ GameObject:
   - component: {fileID: 7767413271356483839}
   - component: {fileID: 7767413271356483837}
   - component: {fileID: 7767413271356483836}
-  - component: {fileID: 7767413271356483840}
   m_Layer: 5
   m_Name: ChestButton
   m_TagString: Untagged
@@ -106410,22 +106336,6 @@ RectTransform:
   m_AnchoredPosition: {x: -110.799805, y: 5.7420044}
   m_SizeDelta: {x: 222.60132, y: 227.64287}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7767413271356483840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7767413271356483838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c004aa72f52ed4339b3d4f447c9a8926, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelId: 5
-  specialEventButton: {fileID: 1256159505537664673}
-  specialEventText: {fileID: 1256159506113281160}
-  SpecialEvent: {fileID: 1256159506095382272}
 --- !u!224 &7767413271357788564
 RectTransform:
   m_ObjectHideFlags: 0
