@@ -6,8 +6,8 @@ public static class Purse
 {
     private const string COINS = "Coins";
     private const string DIAMONDS = "Diamonds";
-    private const int DEFAULT_COINS = 750;
-    private const int DEFAULT_DIAMONDS = 0;
+    private const int DEFAULT_COINS = 750000;
+    private const int DEFAULT_DIAMONDS = 10000;
 
     public static int Coins
     {
