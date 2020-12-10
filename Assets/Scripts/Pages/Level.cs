@@ -384,7 +384,7 @@ public class Level : Page
     private IEnumerator FreeSpinAdd(Page spinPanel)
     {
         spinPanel.Open();
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(.3f);
         spinPanel.Close();
     }
 

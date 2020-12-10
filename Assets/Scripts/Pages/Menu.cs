@@ -141,7 +141,8 @@ public class Menu : Page
             LevelsState.LockLevel(i);
         }
         LevelsState.UnlockLevel(0);
-        Open();
+        Close();
+        StartScreenPage.Open();
     }
 
     private void OpenSoundSettings()
