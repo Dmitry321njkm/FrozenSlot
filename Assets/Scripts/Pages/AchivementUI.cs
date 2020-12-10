@@ -82,7 +82,7 @@ public class AchivementUI : Page
 
     void MaxBetCheck()
     {
-        AchivementCheck(_maxBet, Achivements.GetCompleteSpecialEventsProcent(), Achivements.MAX_BET_NUMBER);
+        AchivementCheck(_maxBet, Achivements.GetMaxBetProcent(), Achivements.MAX_BET_NUMBER);
     }
 
     void DoSpecialEventsCheck()
