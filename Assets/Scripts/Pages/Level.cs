@@ -136,6 +136,11 @@ public class Level : Page
 
     private DayliBonusSystem dayliBonusSystem = default;
 
+    [SerializeField]
+    private Page spin1 = default;
+    [SerializeField]
+    private Page spin3 = default;
+
     private new void Awake()
     {
         base.Awake();
@@ -324,6 +329,15 @@ public class Level : Page
                     if (typeCell.typeOfCell == TypeCell.TypeOfCell.Scatter)
                     {
                         Achivements.SetScatterCounter();
+                        switch (typeCell.GetScore(counter))
+                        {
+                            case 1:
+                                StartCoroutine(FreeSpinAdd(spin1));
+                                break;
+                            case 3:
+                                StartCoroutine(FreeSpinAdd(spin3));
+                                break;
+                        }
                         LevelsState.AddFreeSpin(levelId, typeCell.GetScore(counter));
                         freeSpin = freeSpin;
                     }
@@ -365,6 +379,13 @@ public class Level : Page
         {
             bet = MAX_BET;
         }
+    }
+
+    private IEnumerator FreeSpinAdd(Page spinPanel)
+    {
+        spinPanel.Open();
+        yield return new WaitForSeconds(1);
+        spinPanel.Close();
     }
 
     private IEnumerator SpinCoroutine()

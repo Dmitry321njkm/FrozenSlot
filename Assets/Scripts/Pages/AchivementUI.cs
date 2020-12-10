@@ -122,7 +122,7 @@ public class AchivementUI : Page
 
     void AchivementCheck(AchivementCell _cell, float _percent, int _number)
     {
-        _cell.Percent.text = Mathf.Round(_percent * 10000) / 100 + "%";
+        _cell.Percent.text = Mathf.Round(_percent * 1000) / 1000 + "%";
         _cell.ImageProgress.fillAmount = _percent;
         _cell.Number.text = "x" + _number;
     }

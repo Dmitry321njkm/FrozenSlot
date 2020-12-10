@@ -38,6 +38,7 @@ public class SpecialEventUI : MonoBehaviour
             }
             if ((hour < 0) && (minute < 0))
             {
+                gameObject.SetActive(false);
                 specialEventText.gameObject.SetActive(false);
             }
             yield return new WaitForSeconds(60);

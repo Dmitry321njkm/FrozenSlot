@@ -63,10 +63,10 @@ public class DailyBonus : Page
                 Purse.AddMoney(0, 100);
                 break;
             case 1:
-                Purse.AddMoney(50);
+                Purse.AddMoney(5000);
                 break;
             case 2:
-                Purse.AddMoney(150, 100);
+                Purse.AddMoney(15000, 100);
                 break;
         }
         foreach (var level in LevelPages)
