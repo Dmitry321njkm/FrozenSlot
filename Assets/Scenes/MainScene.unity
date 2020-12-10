@@ -24521,11 +24521,11 @@ RectTransform:
   m_Children:
   - {fileID: 1206857951}
   m_Father: {fileID: 1913804836}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5866229, y: 0.21639013}
-  m_AnchorMax: {x: 0.5866229, y: 0.21639013}
-  m_AnchoredPosition: {x: -11.781998, y: -128}
+  m_AnchorMin: {x: 0.36200002, y: 0.209}
+  m_AnchorMax: {x: 0.36200002, y: 0.209}
+  m_AnchoredPosition: {x: 0, y: -124.40001}
   m_SizeDelta: {x: 187.26617, y: 187.26617}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &578116189
@@ -52110,7 +52110,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "unlock \nnew \nlevel"
+  m_Text: 'Do 10
+
+    Free
+
+    Spins'
 --- !u!222 &1206857953
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -56180,11 +56184,11 @@ RectTransform:
   - {fileID: 1071827446}
   - {fileID: 1434016208}
   m_Father: {fileID: 1913804836}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.36200002, y: 0.209}
-  m_AnchorMax: {x: 0.36200002, y: 0.209}
-  m_AnchoredPosition: {x: 0, y: -124.40001}
+  m_AnchorMin: {x: 0.5866229, y: 0.21639013}
+  m_AnchorMax: {x: 0.5866229, y: 0.21639013}
+  m_AnchoredPosition: {x: -11.781998, y: -128}
   m_SizeDelta: {x: 187.26617, y: 187.26617}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1297243364
@@ -62836,7 +62840,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: x1000
+  m_Text: x500
 --- !u!222 &1434016210
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -83811,8 +83815,8 @@ RectTransform:
   - {fileID: 928273490}
   - {fileID: 799728808}
   - {fileID: 118932448}
-  - {fileID: 1297243363}
   - {fileID: 578116188}
+  - {fileID: 1297243363}
   - {fileID: 936792542}
   m_Father: {fileID: 2114744218}
   m_RootOrder: 0
