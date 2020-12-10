@@ -123,16 +123,12 @@ public class Level : Page
     [SerializeField]
     private Button soundSettingsButton = default;
     [SerializeField]
-    private Button specialEventsButton = default;
-    [SerializeField]
     private Button dailyBonusButton = default;
     [SerializeField]
     private Button achivementsButton = default;
 
     [SerializeField]
     private LevelMenu levelMenu = default;
-    [SerializeField]
-    private SpecialEvents specialEvents = default;
     [SerializeField]
     private AchivementUI achivement = default;
     [SerializeField]
@@ -147,7 +143,6 @@ public class Level : Page
         
         levelMenuButton.onClick.AddListener(OpenLevelMenu);
         soundSettingsButton.onClick.AddListener(OpenSoundSettings);
-        specialEventsButton.onClick.AddListener(OpenSpecialEvents);
         achivementsButton.onClick.AddListener(OpenAchivement);
         getLowerBetButton.onClick.AddListener(GetLowerBet);
         getUpperBetButton.onClick.AddListener(GetUpperBet);
@@ -202,11 +197,6 @@ public class Level : Page
     private void OpenSoundSettings()
     {
         SoundSettingsPage.Open();
-    }
-
-    private void OpenSpecialEvents()
-    {
-        specialEvents.Open();
     }
 
     private void OpenAchivement()

@@ -31,10 +31,10 @@ public class Menu : Page
         {
             button.onClick.AddListener(OpenOrBuy);
             priceCoinText.text = LevelsState.IsLevelAvailible(levelId - 1) ?
-                (Purse.Coins + "/" + priceCoin) :
-                (priceCoin + "");
+                (SetMoneyText(Purse.Coins) + "/" + SetMoneyText(priceCoin)) :
+                (SetMoneyText(priceCoin) + "");
             priceDiamondText.text = LevelsState.IsLevelAvailible(levelId - 1) ?
-                (Purse.Diamonds + "/" + priceDiamond) :
+                (SetMoneyText(Purse.Diamonds) + "/" + SetMoneyText(priceDiamond)) :
                 (priceDiamond + "");
             if (LevelsState.IsLevelAvailible(levelId))
             {
@@ -61,6 +61,17 @@ public class Menu : Page
                     OpenLevel();
                 }
             }
+        }
+
+        private string SetMoneyText(int price)
+        {
+            string endPrice = "";
+            for (; price > 1000; )
+            {
+                endPrice += "K";
+                price /= 1000;
+            }
+            return price + endPrice;
         }
 
         private void OpenLevel()
@@ -90,6 +101,8 @@ public class Menu : Page
     private LevelButton[] levelButtons = default;
     [SerializeField]
     private Button soundSettingsButton = default;
+    [SerializeField]
+    private Button newGameButton = default;
 
     private new void Awake()
     {
@@ -101,6 +114,7 @@ public class Menu : Page
             LevelsState.UnlockLevel(0);
         }
         soundSettingsButton.onClick.AddListener(OpenSoundSettings);
+        newGameButton.onClick.AddListener(NewGame);
     }
 
     private void OnDestroy()
@@ -116,6 +130,18 @@ public class Menu : Page
         {
             levelButton.Init();
         }
+    }
+
+    private void NewGame()
+    {
+        Purse.RemoveAllMoney();
+        for (int i = 0; i < LevelPages.Length; i++)
+        {
+            LevelsState.AddFreeSpin(i, 10);
+            LevelsState.LockLevel(i);
+        }
+        LevelsState.UnlockLevel(0);
+        Open();
     }
 
     private void OpenSoundSettings()

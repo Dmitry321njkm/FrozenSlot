@@ -64,4 +64,10 @@ public static class Purse
         Diamonds -= diamonds;
         return true;
     }
+
+    public static void RemoveAllMoney()
+    {
+        Coins = 0;
+        Diamonds = 0;
+    }
 }
