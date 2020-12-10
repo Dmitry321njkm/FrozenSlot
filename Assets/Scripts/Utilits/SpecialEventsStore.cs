@@ -14,7 +14,7 @@ public static class SpecialEventsStore
     {
         if (!PlayerPrefs.HasKey(levelId + COLLECTED_COINS))
         {
-            SetCollectedCoins(levelId, 0);
+            PlayerPrefs.SetInt(levelId + COLLECTED_COINS, 0);
         }
         return PlayerPrefs.GetInt(levelId + COLLECTED_COINS);
     }
@@ -29,7 +29,7 @@ public static class SpecialEventsStore
     {
         if (!PlayerPrefs.HasKey(levelId + COLLECTED_DIAMONDS))
         {
-            SetCollectedDiamonds(levelId, 0);
+            PlayerPrefs.SetInt(levelId + COLLECTED_DIAMONDS, 0);
         }
         return PlayerPrefs.GetInt(levelId + COLLECTED_DIAMONDS);
     }
