@@ -281,8 +281,6 @@ public class Level : Page
         AudioManager.Instance.MoneySound();
         SpecialEventsStore.SetCollectedCoins(levelId, winCoins);
         coins += CheckLines();
-        Purse.RemoveAllMoney();
-        coins = coins;
     }
 
     private void FillCells()
