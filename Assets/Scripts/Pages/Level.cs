@@ -9,7 +9,6 @@ public class Level : Page
     private const int MAX_BET = 3000;
     private const int BET_STEP = 50;
     private const float SPIN_DELAY = .1f;
-    private const int WILD_ID = 0;
 
     [SerializeField]
     private int levelId = default;
@@ -228,6 +227,7 @@ public class Level : Page
             bet = MAX_BET;
             LevelsState.RemoveFreeSpin(levelId);
             freeSpin = freeSpin;
+            AudioManager.Instance.ScrolingSlotSound();
             StartCoroutine(SpinCoroutine());
         }
         else if (coins >= bet)
@@ -238,6 +238,7 @@ public class Level : Page
             }
             coins -= bet;
             Purse.RemoveMoney(bet, 0);
+            AudioManager.Instance.ScrolingSlotSound();
             StartCoroutine(SpinCoroutine());
         }
     }
@@ -277,8 +278,11 @@ public class Level : Page
         int winCoins = CheckLines();
         winText.text = winCoins + "";
         Purse.AddMoney(winCoins);
+        AudioManager.Instance.MoneySound();
         SpecialEventsStore.SetCollectedCoins(levelId, winCoins);
         coins += CheckLines();
+        Purse.RemoveAllMoney();
+        coins = coins;
     }
 
     private void FillCells()
@@ -318,17 +322,20 @@ public class Level : Page
                     Achivements.SetLinesCounter();
                     if (typeCell.typeOfCell == TypeCell.TypeOfCell.Wild)
                     {
+                        AudioManager.Instance.ScatterWildSound();
                         Achivements.SetWildCounter();
                     }
                     if (typeCell.typeOfCell == TypeCell.TypeOfCell.Diamond)
                     {
                         diamonds++;
                         Purse.AddMoney(0, 1);
+                        AudioManager.Instance.MoneySound();
                         SpecialEventsStore.SetCollectedDiamonds(levelId, 1);
                     }
                     if (typeCell.typeOfCell == TypeCell.TypeOfCell.Scatter)
                     {
                         Achivements.SetScatterCounter();
+                        AudioManager.Instance.ScatterWildSound();
                         switch (typeCell.GetScore(counter))
                         {
                             case 1:
@@ -345,6 +352,7 @@ public class Level : Page
                     {
                         win += (int)((float)(typeCell.GetScore(counter)) * (float)bet * .01f);
                     }
+                    AudioManager.Instance.LineSound();
                     line.Show();
                 }
             }

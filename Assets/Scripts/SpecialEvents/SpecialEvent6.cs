@@ -29,7 +29,7 @@ public class SpecialEvent6 : SpecialEvents
             if (SpecialEventsStore.GetCollectedCoins(levelId) >= 5000)
             {
                 counter++;
-                if (SpecialEventsStore.GetCollectedDiamonds(levelId) >= 500)
+                if (SpecialEventsStore.GetCollectedDiamonds(levelId) >= 150)
                 {
                     counter++;
                 }

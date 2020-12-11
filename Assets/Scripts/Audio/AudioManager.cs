@@ -23,7 +23,7 @@ public class AudioManager : Singleton<AudioManager>
         _audioManager = GetComponent<AudioSource>();
     }
 
-    public void DaylyEventsSound()
+    public void DailyEventsSound()
     {
         _audioManager.clip = _dailyEvents;
         _audioManager.Play();

@@ -45,9 +45,6 @@ public class SpecialEventUI : MonoBehaviour
 
     private void OpenSpecialEvent()
     {
-        if ((hour > 0) || (minute > 0))
-        {
-            SpecialEvent.Open();
-        }
+        SpecialEvent.Open();
     }
 }

@@ -26,7 +26,7 @@ public class SpecialEvent4 : SpecialEvents
         if (SpecialEventsStore.GetDidTenFreeSpins(levelId) >= 10)
         {
             counter++;
-            if (SpecialEventsStore.GetCollectedDiamonds(levelId) >= 500)
+            if (SpecialEventsStore.GetCollectedDiamonds(levelId) >= 90)
             {
                 counter++;
                 if (SpecialEventsStore.NextLevelIsOpen(levelId))

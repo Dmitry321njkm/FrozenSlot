@@ -6,7 +6,7 @@ public class BackGroundMusic : Singleton<BackGroundMusic>
 {
     [HideInInspector]
     public AudioSource _backGroundMusic;
-    
+
     void Start()
     {
         _backGroundMusic = GetComponent<AudioSource>();

@@ -208,6 +208,10 @@ public static class Achivements
     }
     public static float GetOpenTheLevelProcent()
     {
+        if (((float)openTheLevelCounter / (float)OPEN_ALL_LEVELS_NUMBER) > 1)
+        {
+            return 1;
+        }
         return (float)openTheLevelCounter / (float)OPEN_ALL_LEVELS_NUMBER;
     }
 

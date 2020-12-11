@@ -26,7 +26,7 @@ public class SpecialEvent3 : SpecialEvents
         if (SpecialEventsStore.GetCollectedCoins(levelId) >= 2000)
         {
             counter++;
-            if (SpecialEventsStore.GetCollectedDiamonds(levelId) >= 150)
+            if (SpecialEventsStore.GetCollectedDiamonds(levelId) >= 70)
             {
                 counter++;
                 if (SpecialEventsStore.NextLevelIsOpen(levelId))
